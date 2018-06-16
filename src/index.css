@@ -1,5 +1,39 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    background-color: black;
+}
+
+h1 {
+    color:white !important;
+}
+/* .vertical-center{
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    min-height: 100vh;
+}
+.horizontal-center{
+    text-align: center !important;
+}
+.text-center {
+    text-align: center;
+} */
+.body-text{
+    color:white;
+    font-family: "Lucida Console";
+    font-size: 16pt;
+}
+
+/*hover.css modified*/
+.hvr-grow {
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
 }
