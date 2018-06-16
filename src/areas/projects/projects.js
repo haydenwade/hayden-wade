@@ -3,6 +3,11 @@ import { Grid, Row, Col, PageHeader } from 'react-bootstrap';
 import content from './content';
 
 class Projects extends React.Component {
+    componentWillMount(){
+        let element = document.getElementsByTagName('body');
+        element[0].style.backgroundImage = "url('assets/bg8.jpg')";
+        element[0].style.backgroundSize = "cover";
+    }
     renderSingleProject(project,i) {
         return (
             <Col md={12} xs={12} key={i}>

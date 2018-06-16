@@ -1,9 +1,29 @@
 body {
     background-color: black;
+    /* background-image: url(./assets/bg6.jpg); */
+    /* background-size: cover; */
 }
 
 h1 {
     color:white !important;
+}
+.hw-header{
+    background: rgba(0,0,0,.4);
+    border-radius: 5px;
+    padding: 20px 65px;
+    color: #eff1f4;
+    font-family: 'Yatra One', cursive;
+    text-transform: uppercase;
+}
+.masthead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(./haydentybanner.jpeg); */
+    background-size: cover;
+    background-position: 1%;
+    height: 300px;
+    border-radius: 1%;
 }
 /* .vertical-center{
     display: flex;
