@@ -10,12 +10,11 @@ import 'font-awesome/css/font-awesome.min.css';
 import './index.css';
 
 
-
 //areas
 import PageContainer from './shared/pageContainer/pageContainer';
 import Home from './areas/home/home';
 import AboutMe from './areas/aboutMe/aboutMe';
-import Career from './areas/career/career';
+import Services from './areas/services/services';
 import Projects from './areas/projects/projects';
 
 ReactDOM.render(
@@ -24,7 +23,7 @@ ReactDOM.render(
         <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/aboutme' component={AboutMe} />
-            <Route path='/career' component={Career} />
+            <Route path='/services' component={Services} />
             <Route path='/projects' component={Projects} />
             <Redirect to="/" />
         </Switch>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col, PageHeader } from 'react-bootstrap';
 
-class Career extends React.Component {
+class Services extends React.Component {
     render() {
         return (
             <Grid>
@@ -20,4 +20,4 @@ class Career extends React.Component {
         );
     }
 }
-export default Career;
+export default Services;

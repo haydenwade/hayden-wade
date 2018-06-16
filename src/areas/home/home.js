@@ -21,7 +21,7 @@ class HomeComponent extends React.Component {
                     </Col>
                     <Col md={4} xs={12}>
                         <FadeInHoc>
-                            <Tile icon='fa fa-code fa-5x' linkTo='career' text='Services'/>
+                            <Tile icon='fa fa-code fa-5x' linkTo='services' text='Services'/>
                         </FadeInHoc>
                     </Col>
                     <Col md={4} xs={12}>
