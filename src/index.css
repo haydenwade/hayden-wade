@@ -1,12 +1,8 @@
 body {
-    background-color: black;
-    /* background-image: url(./assets/bg6.jpg); */
-    /* background-size: cover; */
+    background-image: url(./assets/bg6.jpg);
+    background-size: cover;
 }
 
-h1 {
-    color:white !important;
-}
 .hw-header{
     background: rgba(0,0,0,.4);
     border-radius: 5px;
@@ -25,20 +21,8 @@ h1 {
     height: 300px;
     border-radius: 1%;
 }
-/* .vertical-center{
-    display: flex;
-    align-items: center;
-    min-height: 100%;
-    min-height: 100vh;
-}
-.horizontal-center{
-    text-align: center !important;
-}
-.text-center {
-    text-align: center;
-} */
+
 .body-text{
-    color:white;
     font-family: "Lucida Console";
     font-size: 16pt;
 }
@@ -56,4 +40,13 @@ h1 {
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.1);
+}
+
+.hr-black{
+    border-bottom: 2px solid black;
+}
+.page-content{
+    background: #eee;
+    border-radius: .5%;
+    opacity: 0.75;
 }

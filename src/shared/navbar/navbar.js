@@ -16,8 +16,8 @@ class AppNavBar extends React.Component {
             <NavItem eventKey={1} href="/aboutme">
               About Me
             </NavItem>
-            <NavItem eventKey={2} href="/services">
-              Services
+            <NavItem eventKey={2} href="/resume">
+              Resume
             </NavItem>
             <NavItem eventKey={3} href="/projects">
               Projects

@@ -14,7 +14,7 @@ import './index.css';
 import PageContainer from './shared/pageContainer/pageContainer';
 import Home from './areas/home/home';
 import AboutMe from './areas/aboutMe/aboutMe';
-import Services from './areas/services/services';
+import Resume from './areas/resume/resume';
 import Projects from './areas/projects/projects';
 
 ReactDOM.render(
@@ -23,7 +23,7 @@ ReactDOM.render(
         <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/aboutme' component={AboutMe} />
-            <Route path='/services' component={Services} />
+            <Route path='/resume' component={Resume} />
             <Route path='/projects' component={Projects} />
             <Redirect to="/" />
         </Switch>
