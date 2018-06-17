@@ -58,10 +58,16 @@ class Resume extends React.Component {
                         </ul>
                     </Col>
                 </Row>
-                <Row>
-                    <Col md={12} xs={12} className='body-text'>
+                {/* <Row>
+                    <Col md={12} xs={12}>
+                        <PageHeader className='hr-black'>Work Expierence</PageHeader>
                     </Col>
                 </Row>
+                <Row>
+                    <Col md={12} xs={12} className='body-text'>
+
+                    </Col>
+                </Row> */}
             </Grid>
         );
     }
