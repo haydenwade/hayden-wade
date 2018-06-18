@@ -1,6 +1,7 @@
 body {
     background-image: url(./assets/bg6.jpg);
     background-size: cover;
+    font-family: "Lucida Console";
 }
 
 .hw-header{
@@ -8,7 +9,7 @@ body {
     border-radius: 5px;
     padding: 20px 65px;
     color: #eff1f4;
-    font-family: 'Yatra One', cursive;
+    /* font-family: 'Lucida Console'; */
     text-transform: uppercase;
 }
 .masthead {
@@ -23,7 +24,7 @@ body {
 }
 
 .body-text{
-    font-family: "Lucida Console";
+    /* font-family: "Lucida Console"; */
     font-size: 16pt;
 }
 
