@@ -4,14 +4,15 @@ body {
     font-family: "Lucida Console";
 }
 
-.hw-header{
-    background: rgba(0,0,0,.4);
+.hw-header {
+    background: rgba(0, 0, 0, .4);
     border-radius: 5px;
     padding: 20px 65px;
     color: #eff1f4;
     /* font-family: 'Lucida Console'; */
     text-transform: uppercase;
 }
+
 .masthead {
     display: flex;
     justify-content: center;
@@ -23,9 +24,34 @@ body {
     border-radius: 1%;
 }
 
-.body-text{
+.body-text {
     /* font-family: "Lucida Console"; */
     font-size: 16pt;
+}
+
+.hr-black {
+    border-bottom: 2px solid black;
+}
+
+.page-content {
+    background: #eee;
+    border-radius: .5%;
+    opacity: 0.75;
+}
+
+.center-pills li {
+    display: inline-block;
+    list-style: none;
+    padding-right: 1%;
+    padding-top: 1%
+}
+
+.center-pills span {
+    color: grey;
+}
+
+.center-pills span:hover {
+    color: black;
 }
 
 /*hover.css modified*/
@@ -37,17 +63,7 @@ body {
     transition-duration: 0.3s;
     transition-property: transform;
 }
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-    transform: scale(1.1);
-}
 
-.hr-black{
-    border-bottom: 2px solid black;
-}
-.page-content{
-    background: #eee;
-    border-radius: .5%;
-    opacity: 0.75;
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    transform: scale(1.1);
 }
