@@ -17,7 +17,7 @@ class AboutMe extends React.Component {
                 </Row>
                 <Row>
                     <Col md={12} xs={12} className='body-text'>
-                        I am a software developer, born and raised in Wisconsin and have now fled to the land of 10,000 Lakes,
+                        I am a software engineer, born and raised in Wisconsin and have now fled to the land of 10,000 Lakes,
                         city with the most fortune 500 companies per capita, Minneapolis. My passion for computers came at a young age,
                         around the time of the first iMac (I had a green one). At the age of 13 I spent my evenings after school editing the markup of my MySpace profile;
                         this was the stepping stone to my future. In highschool I took a web development class and began helping my
