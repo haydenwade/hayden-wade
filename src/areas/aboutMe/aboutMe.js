@@ -1,15 +1,18 @@
 import React from 'react';
-import { Grid, Row, Col} from 'react-bootstrap';
+import { Grid, Row, Col,Image} from 'react-bootstrap';
 
 class AboutMe extends React.Component {
-    componentWillMount() {
-        let element = document.getElementsByTagName('body');
-        element[0].style.backgroundImage = "url('assets/bg5.jpg')";
-        element[0].style.backgroundSize = "cover";
+    renderImage() {
+        return (
+            <Row>
+                <Image src='assets/bg5.png' alt='about hayden wade' rounded responsive />
+            </Row>
+        );
     }
     render() {
         return (
             <Grid className='page-content'>
+            {this.renderImage()}
                 <Row>
                     <Col md={12} xs={12}>
                         <h3 className='hr-black'>About Me</h3>

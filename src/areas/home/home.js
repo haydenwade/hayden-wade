@@ -5,11 +5,11 @@ import FadeInHoc from '../../shared/animations/fade/fadeInHoc';
 
 class HomeComponent extends React.Component {
     //defaulting in it css to see if it loads quicker
-    // componentWillMount(){
-    //     let element = document.getElementsByTagName('body');
-    //     element[0].style.backgroundImage = "url('assets/bg6.jpg')";
-    //     element[0].style.backgroundSize = "cover";
-    // }
+    componentWillMount(){
+        let element = document.getElementsByTagName('body');
+        element[0].style.backgroundImage = "url('assets/bg6.jpg')";
+        element[0].style.backgroundSize = "cover";
+    }
     render() {
         return (
             <Grid>

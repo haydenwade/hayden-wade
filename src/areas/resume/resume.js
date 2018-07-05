@@ -1,30 +1,36 @@
 import React from 'react';
-import { Grid, Row, Col} from 'react-bootstrap';
+import { Grid, Row, Col, Image, Button} from 'react-bootstrap';
 import content from './content';
 
 class Resume extends React.Component {
-    componentWillMount() {
-        let element = document.getElementsByTagName('body');
-        element[0].style.backgroundImage = "url('assets/bg7.jpg')";
-        element[0].style.backgroundSize = "cover";
-    }
-    renderSingleExperience(experience,i) {
+    renderSingleExperience(experience, i) {
         return (
             <Row key={i}>
                 <Col md={12} xs={12}>
                     <strong>{experience.title}</strong>
-                    <br/>
+                    <br />
                     {experience.subtitle}
-                    <br/><br/>
+                    <br /><br />
                     {experience.body}
-                    <br/><br/>
+                    <br /><br />
                 </Col>
+            </Row>
+        );
+    }
+    renderImageWithDownload() {
+        return (
+            <Row>
+            <div className='page-img'>
+                <Image src='assets/bg10.png' alt='hayden wade resume' rounded responsive />
+                <Button href='assets/resume.pdf' bsSize='lg'>Download Resume</Button>
+                </div>
             </Row>
         );
     }
     render() {
         return (
             <Grid className='page-content'>
+                {this.renderImageWithDownload()}
                 <Row>
                     <Col md={12} xs={12}>
                         <h3 className='hr-black'>Technologies</h3>
@@ -83,8 +89,8 @@ class Resume extends React.Component {
                     </Col>
                 </Row>
                 {
-                    content.map((experience,i)=>{
-                        return this.renderSingleExperience(experience,i);
+                    content.map((experience, i) => {
+                        return this.renderSingleExperience(experience, i);
                     })
                 }
                 <Row>

@@ -1,13 +1,8 @@
 import React from 'react';
-import { Grid, Row, Col} from 'react-bootstrap';
+import { Grid, Row, Col, Image} from 'react-bootstrap';
 import content from './content';
 
 class Projects extends React.Component {
-    componentWillMount() {
-        let element = document.getElementsByTagName('body');
-        element[0].style.backgroundImage = "url('assets/bg8.jpg')";
-        element[0].style.backgroundSize = "cover";
-    }
     renderSingleProject(project, i) {
         return (
             <Row key={i}>
@@ -27,9 +22,17 @@ class Projects extends React.Component {
             </Row>
         );
     }
+    renderImage() {
+        return (
+            <Row>
+                <Image src='assets/bg8.png' alt='hayden wade projects' rounded responsive />
+            </Row>
+        );
+    }
     render() {
         return (
             <Grid className='page-content'>
+            {this.renderImage()}
                 <Row>
                     <Col md={12} xs={12}>
                         <h3 className='hr-black'>Projects</h3>
