@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Row, Col, PageHeader} from 'react-bootstrap';
+import { Grid, Row, Col} from 'react-bootstrap';
 import content from './content';
 
 class Projects extends React.Component {
@@ -10,15 +10,15 @@ class Projects extends React.Component {
     }
     renderSingleProject(project, i) {
         return (
-            <Row>
+            <Row key={i}>
                 <Col md={12} xs={12} key={i}>
                     <Row>
                         <Col md={12} xs={12}>
-                            <h2>{project.title} <small>{project.subtitle}</small></h2>
+                            <h4>{project.title} <small>{project.subtitle}</small></h4>
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={12} xs={12} className='body-text'>
+                        <Col md={12} xs={12}>
                             {project.body}
                             <a href={project.link}>View Code</a>
                         </Col>
@@ -32,7 +32,7 @@ class Projects extends React.Component {
             <Grid className='page-content'>
                 <Row>
                     <Col md={12} xs={12}>
-                        <PageHeader className='hr-black'>Projects</PageHeader>
+                        <h3 className='hr-black'>Projects</h3>
                     </Col>
                 </Row>
                 {

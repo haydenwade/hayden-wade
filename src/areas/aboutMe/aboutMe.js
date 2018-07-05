@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Row, Col, PageHeader} from 'react-bootstrap';
+import { Grid, Row, Col} from 'react-bootstrap';
 
 class AboutMe extends React.Component {
     componentWillMount() {
@@ -12,11 +12,11 @@ class AboutMe extends React.Component {
             <Grid className='page-content'>
                 <Row>
                     <Col md={12} xs={12}>
-                        <PageHeader className='hr-black'>About Me</PageHeader>
+                        <h3 className='hr-black'>About Me</h3>
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={12} xs={12} className='body-text'>
+                    <Col md={12} xs={12}>
                         I am a software engineer, born and raised in Wisconsin and have now fled to the land of 10,000 Lakes,
                         city with the most fortune 500 companies per capita, Minneapolis. My passion for computers came at a young age,
                         around the time of the first iMac (I had a green one). At the age of 13 I spent my evenings after school editing the markup of my MySpace profile;

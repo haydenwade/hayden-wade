@@ -2,6 +2,7 @@ body {
     background-image: url(./assets/bg6.jpg);
     background-size: cover;
     font-family: "Lucida Console";
+    font-size: 16px;
 }
 
 .hw-header {
@@ -9,7 +10,6 @@ body {
     border-radius: 5px;
     padding: 20px 65px;
     color: #eff1f4;
-    /* font-family: 'Lucida Console'; */
     text-transform: uppercase;
 }
 
@@ -17,16 +17,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url(./haydentybanner.jpeg); */
     background-size: cover;
     background-position: 1%;
     height: 300px;
     border-radius: 1%;
-}
-
-.body-text {
-    /* font-family: "Lucida Console"; */
-    font-size: 16pt;
 }
 
 .hr-black {

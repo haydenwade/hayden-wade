@@ -4,10 +4,10 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 class AppNavBar extends React.Component {
   render() {
     return (
-      <Navbar inverse collapseOnSelect>
+      <Navbar inverse collapseOnSelect staticTop>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="/">Hayden Wade</a>
+            <a href="/">H/W</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
