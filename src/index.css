@@ -1,7 +1,9 @@
 body {
-    background-image: url(./assets/bg6.jpg);
-    background-size: cover;
+    /* background-image: url(./assets/bg6.jpg); */
+    /* background-size: cover; */
+    background-color: black;
     font-family: "Lucida Console";
+    font-size: 16px;
 }
 
 .hw-header {
@@ -9,7 +11,6 @@ body {
     border-radius: 5px;
     padding: 20px 65px;
     color: #eff1f4;
-    /* font-family: 'Lucida Console'; */
     text-transform: uppercase;
 }
 
@@ -17,16 +18,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url(./haydentybanner.jpeg); */
     background-size: cover;
     background-position: 1%;
     height: 300px;
     border-radius: 1%;
-}
-
-.body-text {
-    /* font-family: "Lucida Console"; */
-    font-size: 16pt;
 }
 
 .hr-black {
@@ -39,6 +34,7 @@ body {
     opacity: 0.75;
 }
 
+/*footer*/
 .center-pills li {
     display: inline-block;
     list-style: none;
@@ -66,4 +62,18 @@ body {
 
 .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
     transform: scale(1.1);
+}
+
+/*page img with button*/
+.page-img {
+    position: relative;
+    width: 100%;
+}
+
+.page-img .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
