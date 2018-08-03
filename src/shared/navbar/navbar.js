@@ -22,6 +22,9 @@ class AppNavBar extends React.Component {
             <NavItem eventKey={3} href="/projects">
               Projects
             </NavItem>
+            <NavItem eventKey={4} href="/voice">
+              Voice
+            </NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
