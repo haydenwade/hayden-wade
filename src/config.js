@@ -1,5 +1,6 @@
+//TODO: env vars
 const config = {
-    viApi: process.env.VI_API_URL || 'http://localhost:3001',
+    viApi: process.env.VI_API_URL || 'https://vi-api.herokuapp.com',//'http://localhost:3001',
     auth:{
         siteDomain:'https://haydenwade.com',
         domain: 'haydenty.auth0.com',
