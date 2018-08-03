@@ -16,6 +16,7 @@ import Home from './areas/home/home';
 import AboutMe from './areas/aboutMe/aboutMe';
 import Resume from './areas/resume/resume';
 import Projects from './areas/projects/projects';
+import Voice from './areas/voice/voice';
 
 ReactDOM.render(
     <PageContainer>
@@ -25,6 +26,7 @@ ReactDOM.render(
             <Route path='/aboutme' component={AboutMe} />
             <Route path='/resume' component={Resume} />
             <Route path='/projects' component={Projects} />
+            <Route path='/voice' component={Voice} />
             <Redirect to="/" />
         </Switch>
         </BrowserRouter>
