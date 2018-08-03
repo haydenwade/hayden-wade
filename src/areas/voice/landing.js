@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Row, Col, Button } from 'react-bootstrap';
-import { isLoggedIn, login, logout, getUserProfile } from '../../utils/auth/auth-service';
+import { isLoggedIn, login, logout } from '../../utils/auth/auth-service';
 
 class LandingPage extends React.Component {
     constructor(props) {
