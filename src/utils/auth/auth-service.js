@@ -11,7 +11,7 @@ const options = {
   redirectUri: config.auth.redirectUri,
   audience: config.auth.audience,
   responseType: 'token id_token',
-  scope: 'openid profile app_metadata'
+  scope: 'openid profile'
 };
 let auth = new auth0.WebAuth(options);
 let userProfile;
@@ -77,7 +77,7 @@ export function setIdToken() {
   let idToken = getParameterByName('id_token');
   localStorage.setItem(ID_TOKEN_KEY, idToken);
   let user = decode(idToken);
-  localStorage.setItem(USER_PROFILE_KEY, user);
+  localStorage.setItem(USER_PROFILE_KEY, JSON.stringify(user));
   userProfile = user;
 }
 

@@ -1,4 +1,3 @@
-//https://reactjsexample.com/svg-component-to-create-placeholder-loading-like-facebook-cards-loading/
 import React from 'react';
 import ContentLoader from "react-content-loader"
 
