@@ -18,7 +18,7 @@ const api = {
                 const feedName = profile[config.auth.siteDomain + '/app_metadata'].feeds[0];
                 a.get(`/briefings/${feedName}`).then((res) => {
                     res.data.forEach(function (briefing) {
-                        briefing.publishDate = moment(briefing.publishDate).format('YYYY-MM-DD');
+                        briefing.publishDate = moment.utc(briefing.publishDate).format('YYYY-MM-DD');
                     });
                     resolve(res.data);
                 });
