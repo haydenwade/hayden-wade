@@ -25,6 +25,13 @@ class HomeComponent extends React.Component {
                 </Row>
                 <Row />
                 <Row>
+                    <Col md={8} xs={12} mdOffset={2} xsOffset={0}>
+                        <FadeInHoc>
+                        <Tile icon='fa fa-microphone fa-5x' linkTo='voice' text='Voice by Hayden' />
+                        </FadeInHoc>
+                    </Col>
+                </Row>
+                <Row>
                     <Col md={4} xs={12}>
                         <FadeInHoc>
                             <Tile icon='fa fa-id-card-o fa-5x' linkTo='aboutme' text='About Me' />
