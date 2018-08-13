@@ -17,8 +17,7 @@ import AboutMe from './areas/aboutMe/aboutMe';
 import Resume from './areas/resume/resume';
 import Projects from './areas/projects/projects';
 import Voice from './areas/voice/voice';
-
-import VoiceLanding from './areas/voice/landing';
+import BriefingManager from './areas/briefingManager/briefingManager';
 import Callback from './utils/auth/callback';
 
 ReactDOM.render(
@@ -29,8 +28,8 @@ ReactDOM.render(
             <Route path='/aboutme' component={AboutMe} />
             <Route path='/resume' component={Resume} />
             <Route path='/projects' component={Projects} />
-            <Route path='/briefings' component={Voice} />
-            <Route path='/voice' component={VoiceLanding}/>
+            <Route path='/briefings' component={BriefingManager} />
+            <Route path='/voice' component={Voice}/>
             <Route path="/callback" component={Callback} />
             <Redirect to="/" />
         </Switch>

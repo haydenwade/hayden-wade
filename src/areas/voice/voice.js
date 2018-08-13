@@ -1,169 +1,55 @@
 import React from 'react';
-import _ from 'lodash';
-import { Grid, Row, Col, Button, FormGroup, ControlLabel, FormControl, HelpBlock, Form, Panel, Glyphicon } from 'react-bootstrap';
-import api from '../voice/services/vi-api';
-import moment from 'moment';
-import BriefingLoader from './briefingLoader';
-
-//TODO:
-//Enhancement: checkbox 'only show titles' can expand single one from title to edit
-//Enhancement: change color of save changes when dirty. would happen on deletes and briefing edits that haven't been saved
-//Enhancement: highlight changes
+import { Grid, Row, Col, Button, Image } from 'react-bootstrap';
 
 class Voice extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            loading: true,
-            briefings: []
-        };
-
-        this.handleBriefingTitleChanged = this.handleBriefingTitleChanged.bind(this);
-        this.handleBriefingPublishDateChanged = this.handleBriefingPublishDateChanged.bind(this);
-        this.handleBriefingContentChanged = this.handleBriefingContentChanged.bind(this);
-        this.handleBriefingExternalLinkChanged = this.handleBriefingExternalLinkChanged.bind(this);
-        this.handleBriefingUpdateClicked = this.handleBriefingUpdateClicked.bind(this);
-        this.handleBriefingDeleteClicked = this.handleBriefingDeleteClicked.bind(this);
-        this.handleCreateNewBriefing = this.handleCreateNewBriefing.bind(this);
-    }
-    componentDidMount() {
-        api.getBriefings().then((res) => {
-            this.setState({ loading: false, briefings: res });
-        });
-    }
-    //#region change handlers for briefings
-    handleBriefingTitleChanged(e) {
-        let briefings = _.cloneDeep(this.state.briefings);
-        let matchingBriefing = _.find(briefings, (b) => {
-            return b.uuid === e.target.id;
-        });
-        matchingBriefing.titleText = e.target.value;
-        this.setState({ ...this.state, briefings: briefings });
-    }
-    handleBriefingPublishDateChanged(e) {
-        let briefings = _.cloneDeep(this.state.briefings);
-        let matchingBriefing = _.find(briefings, (b) => {
-            return b.uuid === e.target.id;
-        });
-        matchingBriefing.publishDate = e.target.value;
-        this.setState({ ...this.state, briefings: briefings });
-    }
-    handleBriefingContentChanged(e) {
-        let briefings = _.cloneDeep(this.state.briefings);
-        let matchingBriefing = _.find(briefings, (b) => {
-            return b.uuid === e.target.id;
-        });
-        matchingBriefing.mainText = e.target.value;
-        this.setState({ ...this.state, briefings: briefings });
-    }
-    handleBriefingExternalLinkChanged(e) {
-        let briefings = _.cloneDeep(this.state.briefings);
-        let matchingBriefing = _.find(briefings, (b) => {
-            return b.uuid === e.target.id;
-        });
-        matchingBriefing.redirectionUrl = e.target.value;
-        this.setState({ ...this.state, briefings: briefings });
-    }
-    handleBriefingUpdateClicked(e) {
-        api.updateBriefings(this.state.briefings).then((res) => {
-            api.getBriefings().then((res)=>{
-                this.setState({ ...this.state, briefings: res });
-            });
-        });
-    }
-    handleBriefingDeleteClicked(e) {
-        let briefings = _.cloneDeep(this.state.briefings);
-        _.remove(briefings, (b) => {
-            return b.uuid === e.target.id;
-        });
-        this.setState({ ...this.state, briefings: briefings });
-    }
-    handleCreateNewBriefing(e) {
-        let newBriefings = [
-            {
-                uuid: 'new',
-                mainText: '',
-                titleText: '',
-                redirectionUrl: '',
-                publishDate: moment().format('YYYY-MM-DD')
-            }
-        ];
-
-        const briefings = newBriefings.concat(this.state.briefings);
-        this.setState({ ...this.state, briefings: briefings });
-    }
-    //#endregion
-    renderSingleBriefing(briefing, i) {
-        return (
-            <Row key={i}>
-                <Col md={12} xs={12}>
-                    <Panel>
-                        <Panel.Body>
-                            <Form horizontal>
-                                <FieldGroup
-                                    id={briefing.uuid}
-                                    type="text"
-                                    label="Title"
-                                    placeholder="Enter title to be displayed in Alexa App"
-                                    value={briefing.titleText}
-                                    onChange={this.handleBriefingTitleChanged}
-                                />
-                                <FieldGroup
-                                    id={briefing.uuid}
-                                    type="date"
-                                    label="Publish Date"
-                                    value={briefing.publishDate}
-                                    onChange={this.handleBriefingPublishDateChanged}
-                                />
-                                <FormGroup controlId={briefing.uuid}>
-                                    <Col componentClass={ControlLabel} sm={2}>
-                                        Content
-                                    </Col>
-                                    <Col sm={10}>
-                                        <FormControl
-                                            componentClass="textarea"
-                                            placeholder="Today's tip..."
-                                            value={briefing.mainText}
-                                            onChange={this.handleBriefingContentChanged}
-                                        />
-                                    </Col>
-                                </FormGroup>
-                                <FieldGroup
-                                    id={briefing.uuid}
-                                    type="text"
-                                    label="External Link"
-                                    placeholder="Enter url to external site"
-                                    value={briefing.redirectionUrl}
-                                    onChange={this.handleBriefingExternalLinkChanged}
-                                />
-                                <Button className="pull-right" id={briefing.uuid} onClick={this.handleBriefingDeleteClicked}>Delete</Button>
-                            </Form>
-                        </Panel.Body>
-                    </Panel>
-                </Col>
-            </Row>
-        )
-    }
     render() {
         return (
             <Grid className='page-content'>
                 <Row>
                     <Col md={12} xs={12}>
-                        <h3 className='hr-black'>Voice</h3>
+                        <Row>
+                            <div className='page-img'>
+                                <Image src='assets/voicebanner3.png' alt='voice by hayden' rounded responsive />
+                                <Button href='mailto:voice@haydenwade.com?subject=I Need Voice ASAP&body=Hi Hayden, I would love to chat about how voice can save my company time and money.' bsSize='lg'>Contact Me<br/>To Get Started</Button>
+                            </div>
+                        </Row>
                     </Col>
                 </Row>
                 <Row>
                     <Col md={12} xs={12}>
-                        Manage Your Briefings:
-                        <Button className="pull-right btn-primary" onClick={this.handleBriefingUpdateClicked}><Glyphicon glyph="floppy-disk" /> Save Changes</Button>
-                        <Button className="pull-right btn-default" onClick={this.handleCreateNewBriefing}>
-                            <Glyphicon glyph="plus" /> New Briefing
-                        </Button>
-                        {
-                            this.state.loading ? <BriefingLoader /> : this.state.briefings.map((briefing, i) => {
-                                return this.renderSingleBriefing(briefing, i);
-                            })
-                        }
+                        <h3 className='hr-black'>Voice By Hayden</h3>
+                        <h4>Do more with less. The power of voice is the future.</h4>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={12} xs={12}>
+                        I help businesses and their clients save time on day to day operations by using voice artificial intelligence(AI).            
+                        <br/>
+                        <br/>
+                        TL;DR - Voice saves time.
+                        <br/>
+                        <br/>
+                        There are only 24 hours in a day and our days get more and more busy with kids, work, and chores. 
+                        To think you can save time by setting a alarm clock via voice rather than by hand is mind blowing. Here are some facts: 
+                        the average typing speed is around 33 words per minute and the average speed of speaking is around 120 words per minute. 
+                        If you do some quick math speaking is <b>4X</b> faster than typing. So if you think about the amount of time you spend
+                        a day typing (texting, emails, searching websites, clicking buttons, etc.) and cut that in half twice, that's how much time you would save by using voice. 
+                        Correction, you would actually save all of the time you spent typing if you did it via voice because you can <b>multi-task </b> 
+                        with voice. Voice doesn't require your <b>visual and physical attention</b>. 
+                        If you want to go a bit overboard you could shower and order dinner in one sentence.
+                        <div className="text-center">
+                            <br />
+                            <i className="fa fa-microphone fa-2x"></i>
+                            <br />
+                            "The reason there are 60 year old men in here texting… it's faster. […] 
+                            Speed is something we are addicted to. Do you know why you don't care about privacy? 'Cause you're willing to give it up for speed." ~ Gary Vaynerchuk
+                            <br />
+                            <br />
+                            "Voice, Like Emojis, Lets Us Say More Faster" ~ Paul Cutsinger
+                            <br />
+                            <br />
+                            <a rel="noopener noreferrer" target="_blank" href="https://developer.amazon.com/blogs/alexa/post/26c76734-3445-4d5f-8c78-aa1eae4100cf/gary-vaynerchuk-voice-will-explode-and-drive-companies-the-size-of-facebook-instagram">Alexa Blogs: Gary Vaynerchuk: Voice Will ‘Explode’ and Drive Companies the Size of Facebook, Instagram</a>
+                        </div>
                     </Col>
                 </Row>
             </Grid>
@@ -171,17 +57,4 @@ class Voice extends React.Component {
     }
 }
 
-function FieldGroup({ id, label, help, ...props }) {
-    return (
-        <FormGroup controlId={id}>
-            <Col componentClass={ControlLabel} sm={2}>
-                {label}
-            </Col>
-            <Col sm={10}>
-                <FormControl {...props} />
-                {help && <HelpBlock>{help}</HelpBlock>}
-            </Col>
-        </FormGroup>
-    );
-}
 export default Voice;

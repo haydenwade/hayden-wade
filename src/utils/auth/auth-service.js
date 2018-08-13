@@ -21,19 +21,24 @@ export function login(state) {
   auth.authorize(options);
 }
 
-export function logout() {
+export function logout(state) {
   clearIdToken();
   clearAccessToken();
+  window.location.href = state;
 }
 export function getUserProfile() {
   return new Promise((resolve, reject) => {
     if (userProfile) {
       resolve(userProfile);
     } else {
-      auth.client.userInfo(getAccessToken(), (err, profile) => {
-        userProfile = profile;
-        resolve(profile);
-      });
+      if (isLoggedIn()) {
+        auth.client.userInfo(getAccessToken(), (err, profile) => {
+          userProfile = profile;
+          resolve(profile);
+        });
+      }else{
+        reject('not authenticated');
+      }
     }
   })
 }
@@ -81,9 +86,8 @@ export function setIdToken() {
   userProfile = user;
 }
 
-export function setState(){
+export function setState() {
   let state = getParameterByName('state');
-  console.log('state:',state);
   window.location.href = state;
 }
 export function isLoggedIn() {

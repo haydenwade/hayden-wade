@@ -1,4 +1,3 @@
-//TODO: env vars
 //DEV
 // const config = {
 //     viApi: process.env.VI_API_URL || 'http://localhost:3001',
