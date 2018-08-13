@@ -10,7 +10,7 @@ class Voice extends React.Component {
                         <Row>
                             <div className='page-img'>
                                 <Image src='assets/voicebanner3.png' alt='voice by hayden' rounded responsive />
-                                <Button href='' bsSize='lg'>Contact Me<br/>To Get Started</Button>
+                                <Button href='mailto:voice@haydenwade.com?subject=I Need Voice ASAP&body=Hi Hayden, I would love to chat about how voice can save my company time and money.' bsSize='lg'>Contact Me<br/>To Get Started</Button>
                             </div>
                         </Row>
                     </Col>
