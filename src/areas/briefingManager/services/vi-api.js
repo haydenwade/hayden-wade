@@ -25,11 +25,18 @@ const api = {
             });
         });
     },
-    updateBriefings: (briefings) => {
+    updateBriefings: (briefings, files) => {
         return new Promise((resolve, reject) => {
             getUserProfile().then((profile) => {
                 const feedName = profile[config.auth.siteDomain + '/app_metadata'].feeds[0];
-                a.post(`/briefings/${feedName}`, { briefings }).then(() => {
+
+                const data = new FormData();
+                data.append('briefings', JSON.stringify(briefings));
+                files.forEach(file=>{
+                    data.append(file.name, file);
+                });
+
+                a.post(`/briefings/${feedName}`,data).then(() => {
                     resolve();
                 });
             });

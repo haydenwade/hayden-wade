@@ -4,6 +4,7 @@ import { Grid, Row, Col, Button, FormGroup, ControlLabel, FormControl, HelpBlock
 import api from './services/vi-api';
 import moment from 'moment';
 import BriefingLoader from './briefingLoader';
+import FilesModal from '../../shared/filesModal/filesModal';
 
 //TODO:
 //Enhancement: checkbox 'only show titles' can expand single one from title to edit
@@ -15,22 +16,41 @@ class Voice extends React.Component {
         super(props);
         this.state = {
             loading: true,
-            briefings: []
+            briefings: [],
+            showFilesModal: false,
+            files:[]
         };
 
         this.handleBriefingTitleChanged = this.handleBriefingTitleChanged.bind(this);
         this.handleBriefingPublishDateChanged = this.handleBriefingPublishDateChanged.bind(this);
         this.handleBriefingContentChanged = this.handleBriefingContentChanged.bind(this);
         this.handleBriefingExternalLinkChanged = this.handleBriefingExternalLinkChanged.bind(this);
+        this.handleBriefingFilenameChanged = this.handleBriefingFilenameChanged.bind(this);
         this.handleBriefingUpdateClicked = this.handleBriefingUpdateClicked.bind(this);
         this.handleBriefingDeleteClicked = this.handleBriefingDeleteClicked.bind(this);
         this.handleCreateNewBriefing = this.handleCreateNewBriefing.bind(this);
+
+        this.handleFilesModalSave = this.handleFilesModalSave.bind(this);
+        this.handleCloseFilesModal = this.handleCloseFilesModal.bind(this);
+        this.handleOpenFilesModal = this.handleOpenFilesModal.bind(this);
     }
     componentDidMount() {
         api.getBriefings().then((res) => {
             this.setState({ loading: false, briefings: res });
         });
     }
+    //#region files modal
+    handleFilesModalSave(newFiles){
+        console.log('saving',newFiles);
+        this.setState({...this.state, showFilesModal:false, files:newFiles})
+    };
+    handleCloseFilesModal(){
+        this.setState({...this.state, showFilesModal:false})
+    }
+    handleOpenFilesModal(){
+        this.setState({...this.state, showFilesModal:true})
+    }
+    //#endregion
     //#region change handlers for briefings
     handleBriefingTitleChanged(e) {
         let briefings = _.cloneDeep(this.state.briefings);
@@ -64,8 +84,16 @@ class Voice extends React.Component {
         matchingBriefing.redirectionUrl = e.target.value;
         this.setState({ ...this.state, briefings: briefings });
     }
+    handleBriefingFilenameChanged(e){
+        let briefings = _.cloneDeep(this.state.briefings);
+        let matchingBriefing = _.find(briefings, (b) => {
+            return b.uuid === e.target.id;
+        });
+        matchingBriefing.filename = e.target.value;
+        this.setState({ ...this.state, briefings: briefings });
+    }
     handleBriefingUpdateClicked(e) {
-        api.updateBriefings(this.state.briefings).then((res) => {
+        api.updateBriefings(this.state.briefings, this.state.files).then((res) => {
             api.getBriefings().then((res)=>{
                 this.setState({ ...this.state, briefings: res });
             });
@@ -85,6 +113,7 @@ class Voice extends React.Component {
                 mainText: '',
                 titleText: '',
                 redirectionUrl: '',
+                filename:'',
                 publishDate: moment().format('YYYY-MM-DD')
             }
         ];
@@ -136,6 +165,14 @@ class Voice extends React.Component {
                                     value={briefing.redirectionUrl}
                                     onChange={this.handleBriefingExternalLinkChanged}
                                 />
+                                <FieldGroup
+                                    id={briefing.uuid}
+                                    type="text"
+                                    label="Media Filename"
+                                    placeholder="Enter the filename for this briefing"
+                                    value={briefing.filename}
+                                    onChange={this.handleBriefingFilenameChanged}
+                                />                 
                                 <Button className="pull-right" id={briefing.uuid} onClick={this.handleBriefingDeleteClicked}>Delete</Button>
                             </Form>
                         </Panel.Body>
@@ -156,9 +193,8 @@ class Voice extends React.Component {
                     <Col md={12} xs={12}>
                         Manage Your Briefings:
                         <Button className="pull-right btn-primary" onClick={this.handleBriefingUpdateClicked}><Glyphicon glyph="floppy-disk" /> Save Changes</Button>
-                        <Button className="pull-right btn-default" onClick={this.handleCreateNewBriefing}>
-                            <Glyphicon glyph="plus" /> New Briefing
-                        </Button>
+                        <Button className="pull-right btn-default" onClick={this.handleCreateNewBriefing}><Glyphicon glyph="plus" /> New Briefing</Button>
+                        <Button className="pull-right btn-default" onClick={this.handleOpenFilesModal}><Glyphicon glyph="folder-open" /> Files</Button>
                         {
                             this.state.loading ? <BriefingLoader /> : this.state.briefings.map((briefing, i) => {
                                 return this.renderSingleBriefing(briefing, i);
@@ -166,6 +202,15 @@ class Voice extends React.Component {
                         }
                     </Col>
                 </Row>
+                <FilesModal
+                    title='Briefings Media Files'
+                    body='These files are associated with your briefings.'
+                    show={this.state.showFilesModal}
+                    handleClose={this.handleCloseFilesModal}
+                    handleSave={this.handleFilesModalSave}
+                    fileTypes={['audio/mp3','video/mp4']}
+                    files={this.state.files}
+                />
             </Grid>
         )
     }
