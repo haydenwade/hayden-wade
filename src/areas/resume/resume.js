@@ -29,7 +29,7 @@ class Resume extends React.Component {
     }
     render() {
         return (
-            <Grid className='page-content'>
+            <Grid>
                 {this.renderImageWithDownload()}
                 <Row>
                     <Col md={12} xs={12}>

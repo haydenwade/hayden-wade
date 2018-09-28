@@ -1,40 +1,48 @@
 body {
-    /* background-image: url(./assets/bg6.jpg); */
-    /* background-size: cover; */
-    background-color: black;
-    font-family: "Lucida Console";
+    background-color: white;
     font-size: 16px;
-}
-
-.hw-header {
-    background: rgba(0, 0, 0, .4);
-    border-radius: 5px;
-    padding: 20px 65px;
-    color: #eff1f4;
-    text-transform: uppercase;
-}
-
-.masthead {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: 1%;
-    height: 300px;
-    border-radius: 1%;
 }
 
 .hr-black {
     border-bottom: 2px solid black;
 }
 
-.page-content {
-    background: #eee;
-    border-radius: .5%;
-    opacity: 0.75;
+/*home page styles*/
+
+.red-shadow {
+    box-shadow: 15px 15px 10px #fba19d;
 }
 
+.red-brightest {
+    background: #f95c55;
+}
+
+.home-img-col {
+    padding-right: 0 !important;
+}
+
+@media only screen and (max-width:550px) {
+    .home-left-col {
+        padding-bottom: 20px;
+    }
+}
+
+.last-row {
+    padding-bottom: 20px;
+}
+
+.red-underline-text {
+    text-decoration: underline #f95c55;
+}
+
+/*why voice platform icons*/
+@media only screen and (min-width:600px) {
+    .p-right{
+        padding-right: 1em;
+    }
+}
 /*footer*/
+
 .center-pills li {
     display: inline-block;
     list-style: none;
@@ -51,6 +59,7 @@ body {
 }
 
 /*hover.css modified*/
+
 .hvr-grow {
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -65,6 +74,7 @@ body {
 }
 
 /*page img with button*/
+
 .page-img {
     position: relative;
     width: 100%;
