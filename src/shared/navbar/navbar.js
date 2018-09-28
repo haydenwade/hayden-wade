@@ -1,11 +1,11 @@
 import React from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown,MenuItem } from 'react-bootstrap';
 import AuthLoginProfile from '../../utils/auth/components/login-profile';
 
 class AppNavBar extends React.Component {
   render() {
     return (
-      <Navbar inverse collapseOnSelect staticTop>
+      <Navbar collapseOnSelect staticTop>
         <Navbar.Header>
           <Navbar.Brand>
             <a href="/">H/W</a>
@@ -14,18 +14,17 @@ class AppNavBar extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={1} href="/aboutme">
-              About Me
+            <NavItem eventKey={1} href="/about">
+              About
             </NavItem>
             <NavItem eventKey={2} href="/resume">
               Resume
             </NavItem>
-            <NavItem eventKey={3} href="/projects">
-              Projects
-            </NavItem>
-            <NavItem eventKey={4} href="/voice">
-              Voice
-            </NavItem>
+            <NavDropdown eventKey={4} title="Voice" id="voiceNavDropdown">
+              <MenuItem eventKey={4.1} href="/voice">Why Voice</MenuItem>
+              <MenuItem eventKey={4.2} href="/briefing-content-manager" >Briefing Content Manager</MenuItem>
+              {/* <MenuItem eventKey={4.3} href="/custom-skills">Custom Skills</MenuItem> */}
+            </NavDropdown>
             <NavItem >
               <AuthLoginProfile/>
             </NavItem>

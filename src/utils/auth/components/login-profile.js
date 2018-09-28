@@ -1,6 +1,6 @@
 import React from 'react';
 import { isLoggedIn, getUserProfile, login, logout } from '../auth-service';
-import { Image, Button } from 'react-bootstrap';
+// import { Image, Button } from 'react-bootstrap';
 
 class AuthLoginProfile extends React.Component {
     constructor(props) {
@@ -24,13 +24,13 @@ class AuthLoginProfile extends React.Component {
         if (isLoggedIn()) {
             return (
                 <div>
-                    <Button onClick={this.logout}>Logout</Button>
-                    <Image src={this.state.picture} circle height={30} />
+                    <span className='red-underline-text' onClick={this.logout}>Logout </span>
+                    {/* <Image src={this.state.picture} circle height={20} /> */}
                 </div>
             )
         }
         else {
-            return (<Button onClick={this.login}>Login</Button>)
+            return (<span className='red-underline-text' onClick={this.login}>BCM Login</span>)
         }
     }
 }

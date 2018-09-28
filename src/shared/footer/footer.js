@@ -4,7 +4,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 class AppFooter extends React.Component {
     render() {
         return (
-            <Grid>
+            <Grid className='red-brightest'>
                 <Row>
                     <Col xs={12} md={12} className="text-center">
                         <ul className="center-pills">

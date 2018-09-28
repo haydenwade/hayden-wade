@@ -183,7 +183,7 @@ class Voice extends React.Component {
     }
     render() {
         return (
-            <Grid className='page-content'>
+            <Grid>
                 <Row>
                     <Col md={12} xs={12}>
                         <h3 className='hr-black'>Briefing Manager</h3>
@@ -191,8 +191,8 @@ class Voice extends React.Component {
                 </Row>
                 <Row>
                     <Col md={12} xs={12}>
-                        Manage Your Briefings:
-                        <Button className="pull-right btn-primary" onClick={this.handleBriefingUpdateClicked}><Glyphicon glyph="floppy-disk" /> Save Changes</Button>
+                        Manage Your Briefings:<br/>
+                        <Button className="pull-right btn-primary" onClick={this.handleBriefingUpdateClicked}><Glyphicon glyph="floppy-disk" /> Publish</Button>
                         <Button className="pull-right btn-default" onClick={this.handleCreateNewBriefing}><Glyphicon glyph="plus" /> New Briefing</Button>
                         <Button className="pull-right btn-default" onClick={this.handleOpenFilesModal}><Glyphicon glyph="folder-open" /> Files</Button>
                         {
