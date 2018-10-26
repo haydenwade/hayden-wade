@@ -21,14 +21,11 @@ class Voice extends React.Component {
             files:[]
         };
 
-        this.handleBriefingTitleChanged = this.handleBriefingTitleChanged.bind(this);
-        this.handleBriefingPublishDateChanged = this.handleBriefingPublishDateChanged.bind(this);
-        this.handleBriefingContentChanged = this.handleBriefingContentChanged.bind(this);
-        this.handleBriefingExternalLinkChanged = this.handleBriefingExternalLinkChanged.bind(this);
-        this.handleBriefingFilenameChanged = this.handleBriefingFilenameChanged.bind(this);
         this.handleBriefingUpdateClicked = this.handleBriefingUpdateClicked.bind(this);
         this.handleBriefingDeleteClicked = this.handleBriefingDeleteClicked.bind(this);
         this.handleCreateNewBriefing = this.handleCreateNewBriefing.bind(this);
+
+        this.handleChange = this.handleChange.bind(this);
 
         this.handleFilesModalSave = this.handleFilesModalSave.bind(this);
         this.handleCloseFilesModal = this.handleCloseFilesModal.bind(this);
@@ -52,44 +49,12 @@ class Voice extends React.Component {
     }
     //#endregion
     //#region change handlers for briefings
-    handleBriefingTitleChanged(e) {
-        let briefings = _.cloneDeep(this.state.briefings);
+    handleChange(e){
+        let briefings = Object.assign({}, this.state).briefings;
         let matchingBriefing = _.find(briefings, (b) => {
             return b.uuid === e.target.id;
         });
-        matchingBriefing.titleText = e.target.value;
-        this.setState({ ...this.state, briefings: briefings });
-    }
-    handleBriefingPublishDateChanged(e) {
-        let briefings = _.cloneDeep(this.state.briefings);
-        let matchingBriefing = _.find(briefings, (b) => {
-            return b.uuid === e.target.id;
-        });
-        matchingBriefing.publishDate = e.target.value;
-        this.setState({ ...this.state, briefings: briefings });
-    }
-    handleBriefingContentChanged(e) {
-        let briefings = _.cloneDeep(this.state.briefings);
-        let matchingBriefing = _.find(briefings, (b) => {
-            return b.uuid === e.target.id;
-        });
-        matchingBriefing.mainText = e.target.value;
-        this.setState({ ...this.state, briefings: briefings });
-    }
-    handleBriefingExternalLinkChanged(e) {
-        let briefings = _.cloneDeep(this.state.briefings);
-        let matchingBriefing = _.find(briefings, (b) => {
-            return b.uuid === e.target.id;
-        });
-        matchingBriefing.redirectionUrl = e.target.value;
-        this.setState({ ...this.state, briefings: briefings });
-    }
-    handleBriefingFilenameChanged(e){
-        let briefings = _.cloneDeep(this.state.briefings);
-        let matchingBriefing = _.find(briefings, (b) => {
-            return b.uuid === e.target.id;
-        });
-        matchingBriefing.filename = e.target.value;
+        matchingBriefing[e.target.name] = e.target.value;
         this.setState({ ...this.state, briefings: briefings });
     }
     handleBriefingUpdateClicked(e) {
@@ -100,7 +65,7 @@ class Voice extends React.Component {
         });
     }
     handleBriefingDeleteClicked(e) {
-        let briefings = _.cloneDeep(this.state.briefings);
+        let briefings = Object.assign({},this.state).briefings;
         _.remove(briefings, (b) => {
             return b.uuid === e.target.id;
         });
@@ -131,18 +96,20 @@ class Voice extends React.Component {
                             <Form horizontal>
                                 <FieldGroup
                                     id={briefing.uuid}
+                                    name="titleText"
                                     type="text"
                                     label="Title"
                                     placeholder="Enter title to be displayed in Alexa App"
                                     value={briefing.titleText}
-                                    onChange={this.handleBriefingTitleChanged}
+                                    onChange={this.handleChange}
                                 />
                                 <FieldGroup
                                     id={briefing.uuid}
+                                    name="publishDate"
                                     type="date"
                                     label="Publish Date"
                                     value={briefing.publishDate}
-                                    onChange={this.handleBriefingPublishDateChanged}
+                                    onChange={this.handleChange}
                                 />
                                 <FormGroup controlId={briefing.uuid}>
                                     <Col componentClass={ControlLabel} sm={2}>
@@ -150,28 +117,31 @@ class Voice extends React.Component {
                                     </Col>
                                     <Col sm={10}>
                                         <FormControl
+                                            name="mainText"
                                             componentClass="textarea"
                                             placeholder="Today's tip..."
                                             value={briefing.mainText}
-                                            onChange={this.handleBriefingContentChanged}
+                                            onChange={this.handleChange}
                                         />
                                     </Col>
                                 </FormGroup>
                                 <FieldGroup
                                     id={briefing.uuid}
+                                    name="redirectionUrl"
                                     type="text"
                                     label="External Link"
                                     placeholder="Enter url to external site"
                                     value={briefing.redirectionUrl}
-                                    onChange={this.handleBriefingExternalLinkChanged}
+                                    onChange={this.handleChange}
                                 />
                                 <FieldGroup
                                     id={briefing.uuid}
+                                    name="filename"
                                     type="text"
                                     label="Media Filename"
                                     placeholder="Enter the filename for this briefing"
                                     value={briefing.filename}
-                                    onChange={this.handleBriefingFilenameChanged}
+                                    onChange={this.handleChange}
                                 />                 
                                 <Button className="pull-right" id={briefing.uuid} onClick={this.handleBriefingDeleteClicked}>Delete</Button>
                             </Form>

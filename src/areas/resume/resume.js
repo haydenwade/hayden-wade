@@ -52,7 +52,7 @@ class Resume extends React.Component {
                         <h4>Day-To-Day Comfort</h4>
                         <ul>
                             <li>Angular & AngularJS</li>
-                            <li>React.js (in progress)</li>
+                            <li>React.js</li>
                             <li>Redux</li>
                             <li>HTML5, CSS3</li>
                             <li>Bootstrap</li>
