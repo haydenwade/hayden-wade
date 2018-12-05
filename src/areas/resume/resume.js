@@ -52,19 +52,18 @@ class Resume extends React.Component {
                         <h4>Day-To-Day Comfort</h4>
                         <ul>
                             <li>Angular & AngularJS</li>
-                            <li>React.js</li>
-                            <li>Redux</li>
+                            <li>React.js, Redux</li>
                             <li>HTML5, CSS3</li>
                             <li>Bootstrap</li>
                             <li>JavaScript</li>
-                            <li>Node.js</li>
+                            <li>Node.js - Hapi.js, Express</li>
                             <li>RESTful Apis</li>
                             <li>C#, VB .NET</li>
                             <li>ServiceStack</li>
                             <li>Auth0</li>
                             <li>Elasticsearch</li>
                             <li>SQL</li>
-                            <li>Git along with GitHub</li>
+                            <li>Git</li>
                         </ul>
                     </Col>
                     <Col md={4} xs={12}>
@@ -73,9 +72,9 @@ class Resume extends React.Component {
                             <li>MongoDB</li>
                             <li>Alexa Skills</li>
                             <li>AWS Lambda</li>
-                            <li>Enzyme, Jest, Jasmine - Test Frameworks</li>
-                            <li>Nightwatch.js - E2E Test Framework(limited)</li>
-                            <li>Protractor - E2E Test Framework</li>
+                            <li>Enzyme, Jest, Jasmine</li>
+                            <li>Nightwatch.js</li>
+                            <li>Protractor</li>
                             <li>Gulp</li>
                             <li>C++</li>
                             <li>Assembly</li>
@@ -100,7 +99,7 @@ class Resume extends React.Component {
                 </Row>
                 <Row>
                     <Col md={12} xs={12}>
-                        University of Wisconsin - Platteville<br />
+                        University of Wisconsin - Platteville, 2012-2016<br />
                         Bachelor's of Science, Software Engineering - Magna Cum Laude, Deans List
                     </Col>
                 </Row>

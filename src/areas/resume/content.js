@@ -2,7 +2,7 @@ const content = [
     {
         "title":"SOFTWARE ENGINEER II - NAVISPHERE VISION",
         "subtitle":"C.H. Robinson, Eden Prairie, Minnesota, January 2018 - Current",
-        "body":"Enhanced eCommerce application that provides customers a view into their global supply chain. Worked closely with data scientists to provide in-app predictive analytics. Designed, implemented, and tested web application to help onboard new customers using React.js and Redux. Built software to consume data from enterprise service bus (ESB). Mentored a growing team of developers. Implemented new customers on a strict deadline. Primary code utilization included HTML5, CSS3, AngularJS, Node.js, MongoDB, Elasticsearch, Enzyme, Jest, Nightwatch.js, and C#."
+        "body":"Enhanced and maintained eCommerce application that provides customers a view into their global supply chain (originally written in AngularJS, currently re-writing with React.js and Redux). Worked closely with data scientists to provide in-app predictive analytics and research 3rd party APIs. Designed, implemented, and tested web application to help onboard new customers using React.js and Redux. Built software to consume data from enterprise service bus (ESB). Mentored a growing team of developers. Implemented new customers on a strict deadline. Primary code utilization included React.js, Redux, AngularJS, Node.js (Hapi.js), MongoDB, Elasticsearch, Enzyme, Jest, Nightwatch.js, and C# (ServiceStack)."
     },
     {
         "title":"SOFTWARE ENGINEER I - GLOBAL FORWARDING",
