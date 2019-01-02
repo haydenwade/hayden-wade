@@ -61,7 +61,7 @@ class Resume extends React.Component {
                             <li>RESTful Apis</li>
                             <li>C#, VB .NET</li>
                             <li>Auth0</li>
-                            <li>Elastic Search</li>
+                            <li>Elasticsearch</li>
                             <li>SQL</li>
                             <li>ServiceStack</li>
                             <li>Git</li>
