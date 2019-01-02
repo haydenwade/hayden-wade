@@ -53,16 +53,17 @@ class Resume extends React.Component {
                         <ul>
                             <li>Angular & AngularJS</li>
                             <li>React.js, Redux</li>
-                            <li>HTML5, CSS3</li>
                             <li>Bootstrap</li>
+                            <li>HTML5, CSS3</li>
                             <li>JavaScript</li>
                             <li>Node.js - Hapi.js, Express</li>
+                            <li>Enzyme, Jest, Nightwatch.js</li>
                             <li>RESTful Apis</li>
                             <li>C#, VB .NET</li>
-                            <li>ServiceStack</li>
                             <li>Auth0</li>
                             <li>Elasticsearch</li>
                             <li>SQL</li>
+                            <li>ServiceStack</li>
                             <li>Git</li>
                         </ul>
                     </Col>
@@ -71,14 +72,13 @@ class Resume extends React.Component {
                         <ul>
                             <li>MongoDB</li>
                             <li>Alexa Skills</li>
-                            <li>AWS Lambda</li>
-                            <li>Enzyme, Jest, Jasmine</li>
-                            <li>Nightwatch.js</li>
-                            <li>Protractor</li>
-                            <li>Gulp</li>
+                            <li>AWS, Azure</li>
+                            <li>Bing Maps</li>
+                            <li>Socket.io</li>
                             <li>C++</li>
                             <li>Assembly</li>
                             <li>Java</li>
+                            <li>Kafka</li>
                         </ul>
                     </Col>
                 </Row>

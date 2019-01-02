@@ -2,7 +2,7 @@ const content = [
     {
         "title":"SOFTWARE ENGINEER II - NAVISPHERE VISION",
         "subtitle":"C.H. Robinson, Eden Prairie, Minnesota, January 2018 - Current",
-        "body":"Enhanced and maintained eCommerce application that provides customers a view into their global supply chain (originally written in AngularJS, currently re-writing with React.js and Redux). Worked closely with data scientists to provide in-app predictive analytics and research 3rd party APIs. Designed, implemented, and tested web application to help onboard new customers using React.js and Redux. Built software to consume data from enterprise service bus (ESB). Mentored a growing team of developers. Implemented new customers on a strict deadline. Primary code utilization included React.js, Redux, AngularJS, Node.js (Hapi.js), SQL, MongoDB, Elasticsearch, Enzyme, Jest, Nightwatch.js, and C# (ServiceStack)."
+        "body":"Enhanced and maintained eCommerce application that provides customers a view into their global supply chain (originally written in AngularJS, currently re-writing with React.js and Redux). Worked closely with data scientists to provide in-app predictive analytics, research 3rd party APIs, and created proof of concepts. Implemented new customers on a strict deadline. Streamlined customer implementations by designing, implementing, and testing new web application using React.js and Redux. Reduced customer implementation timelines by leveraging software and driving standardization. Built software to consume multiple sources of data from enterprise service bus (ESB). Mentored a growing team of engineers and summer interns. Primary code utilization included React.js, Redux, AngularJS, Node.js (Hapi.js), SQL, MongoDB, Elasticsearch, Enzyme, Jest, Nightwatch.js, and C# (ServiceStack)."
     },
     {
         "title":"SOFTWARE ENGINEER I - GLOBAL FORWARDING",
@@ -12,7 +12,7 @@ const content = [
     {
         "title":"PROGRAMMER ANALYST INTERN - GLOBAL FORWARDING",
         "subtitle":"C.H. Robinson, Eden Prairie, Minnesota, May 2015 - May 2016",
-        "body":"Gathered requirements from users, designed, implemented, and tested web application to support team's software deployment process. Used AngularJS, SQL, ServiceStack, C# to develop web application. Worked remotely for half of the internship where I contributed to sprint work along side scrum team. Presented products to executives, managers, and various teams."
+        "body":"Gathered requirements from users, designed, implemented, and tested web application to support team's software deployment process. Used AngularJS, SQL, ServiceStack, C# to develop web application. Built WPF application to reprocess messages, used by our support team. Worked remotely for half of the internship where I contributed to sprint work along side scrum team. Sprint work included enhancing and maintaining large VB .NET application and building out new web applications to support the needs of the growing Global Forwarding Division. Presented products/work to executives, managers, and various teams."
     },
     {
         "title":"SOFTWARE ENGINEER",
@@ -21,13 +21,8 @@ const content = [
     },
     {
         "title":"SOFTWARE ENGINEER INTERN",
-        "subtitle":"Danfoss, Loves Park, IL, May 2014 - August 2014",
+        "subtitle":"Danfoss, Loves Park, Illinois, May 2014 - August 2014",
         "body":"Designed and implemented embedded Wi-Fi communication system with mobile interface. Prototyped using ST Discovery Kit microcontroller and Wi-Fi module. Primary code utilization included HTML5, CSS3, JavaScript, and C."
     }
-    // {
-    //     "title":"",
-    //     "subtitle":"",
-    //     "body":""
-    // }
 ];
 export default content;
