@@ -1,8 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col, Button } from 'react-bootstrap';
 
-class BriefingContentManager extends React.Component {
-    render() {
+const BriefingContentManager = ()=> {
         return (
             <Grid>
                 <Row>
@@ -63,7 +62,6 @@ class BriefingContentManager extends React.Component {
                 </Row>
             </Grid>
         )
-    }
 }
 
 export default BriefingContentManager;

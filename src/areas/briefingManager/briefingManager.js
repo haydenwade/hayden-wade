@@ -20,16 +20,6 @@ class Voice extends React.Component {
             showFilesModal: false,
             files:[]
         };
-
-        this.handleBriefingUpdateClicked = this.handleBriefingUpdateClicked.bind(this);
-        this.handleBriefingDeleteClicked = this.handleBriefingDeleteClicked.bind(this);
-        this.handleCreateNewBriefing = this.handleCreateNewBriefing.bind(this);
-
-        this.handleChange = this.handleChange.bind(this);
-
-        this.handleFilesModalSave = this.handleFilesModalSave.bind(this);
-        this.handleCloseFilesModal = this.handleCloseFilesModal.bind(this);
-        this.handleOpenFilesModal = this.handleOpenFilesModal.bind(this);
     }
     componentDidMount() {
         api.getBriefings().then((res) => {
@@ -37,19 +27,19 @@ class Voice extends React.Component {
         });
     }
     //#region files modal
-    handleFilesModalSave(newFiles){
+    handleFilesModalSave = (newFiles) => {
         console.log('saving',newFiles);
         this.setState({...this.state, showFilesModal:false, files:newFiles})
     };
-    handleCloseFilesModal(){
+    handleCloseFilesModal = () => {
         this.setState({...this.state, showFilesModal:false})
     }
-    handleOpenFilesModal(){
+    handleOpenFilesModal = () => {
         this.setState({...this.state, showFilesModal:true})
     }
     //#endregion
     //#region change handlers for briefings
-    handleChange(e){
+    handleChange = (e) => {
         let briefings = Object.assign({}, this.state).briefings;
         let matchingBriefing = _.find(briefings, (b) => {
             return b.uuid === e.target.id;
@@ -57,21 +47,21 @@ class Voice extends React.Component {
         matchingBriefing[e.target.name] = e.target.value;
         this.setState({ ...this.state, briefings: briefings });
     }
-    handleBriefingUpdateClicked(e) {
+    handleBriefingUpdateClicked = (e) => {
         api.updateBriefings(this.state.briefings, this.state.files).then((res) => {
             api.getBriefings().then((res)=>{
                 this.setState({ ...this.state, briefings: res });
             });
         });
     }
-    handleBriefingDeleteClicked(e) {
+    handleBriefingDeleteClicked = (e) => {
         let briefings = Object.assign({},this.state).briefings;
         _.remove(briefings, (b) => {
             return b.uuid === e.target.id;
         });
         this.setState({ ...this.state, briefings: briefings });
     }
-    handleCreateNewBriefing(e) {
+    handleCreateNewBriefing = (e) => {
         let newBriefings = [
             {
                 uuid: 'new',
