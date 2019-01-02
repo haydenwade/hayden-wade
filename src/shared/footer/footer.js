@@ -1,8 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 
-class AppFooter extends React.Component {
-    render() {
+const AppFooter = ()=> {
         return (
             <Grid className='red-brightest'>
                 <Row>
@@ -23,6 +22,5 @@ class AppFooter extends React.Component {
                 </Row>
             </Grid>
         );
-    }
 }
 export default AppFooter;

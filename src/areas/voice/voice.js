@@ -1,8 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col, Button, Image } from 'react-bootstrap';
 
-class Voice extends React.Component {
-    render() {
+const Voice = () => {
         return (
             <Grid>
                 <Row>
@@ -113,7 +112,6 @@ class Voice extends React.Component {
                 </Row>
             </Grid>
         )
-    }
 }
 
 export default Voice;

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 
-class CustomSkills extends React.Component {
-    render() {
+const CustomSkills = () => {
         return (
             <Grid>
                 <Row>
@@ -13,7 +12,6 @@ class CustomSkills extends React.Component {
                 </Row>              
             </Grid>
         )
-    }
 }
 
 export default CustomSkills;

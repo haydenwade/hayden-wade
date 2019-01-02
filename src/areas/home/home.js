@@ -1,8 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col, Button} from 'react-bootstrap';
 
-class HomeComponent extends React.Component {
-    render() {
+const HomeComponent = () => {
         return (
             <Grid>
                 <Row className='red-shadow'>
@@ -80,7 +79,6 @@ class HomeComponent extends React.Component {
                 </Row>
             </Grid>
         )
-    }
 }
 
 export default HomeComponent;
