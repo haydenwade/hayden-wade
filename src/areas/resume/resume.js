@@ -51,8 +51,8 @@ class Resume extends React.Component {
                     <Col md={4} xs={12}>
                         <h4>Day-To-Day Comfort</h4>
                         <ul>
-                            <li>Angular & AngularJS</li>
                             <li>React.js, Redux</li>
+                            <li>Angular & AngularJS</li>
                             <li>Bootstrap</li>
                             <li>HTML5, CSS3</li>
                             <li>JavaScript</li>
@@ -64,7 +64,7 @@ class Resume extends React.Component {
                             <li>Elasticsearch</li>
                             <li>SQL</li>
                             <li>ServiceStack</li>
-                            <li>Git</li>
+                            <li>Socket.io</li>
                         </ul>
                     </Col>
                     <Col md={4} xs={12}>
@@ -74,9 +74,8 @@ class Resume extends React.Component {
                             <li>Alexa Skills</li>
                             <li>AWS, Azure</li>
                             <li>Bing Maps</li>
-                            <li>Socket.io</li>
-                            <li>C++</li>
-                            <li>Assembly</li>
+                            <li>Docker</li>
+                            <li>C++, Assembly</li>
                             <li>Java</li>
                             <li>Kafka</li>
                         </ul>
