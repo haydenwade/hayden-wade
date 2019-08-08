@@ -61,7 +61,7 @@ class Resume extends React.Component {
                             <li>RESTful Apis</li>
                             <li>C#, VB .NET</li>
                             <li>Auth0</li>
-                            <li>Elasticsearch</li>
+                            <li>MongoDB, Elasticsearch</li>
                             <li>SQL</li>
                             <li>ServiceStack</li>
                             <li>Socket.io</li>
@@ -70,14 +70,14 @@ class Resume extends React.Component {
                     <Col md={4} xs={12}>
                         <h4>Experience With</h4>
                         <ul>
-                            <li>MongoDB</li>
+                            <li>Docker</li>
                             <li>Alexa Skills</li>
                             <li>AWS, Azure</li>
+                            <li>Azure DevOps, Azure Pipelines</li>
                             <li>Bing Maps</li>
-                            <li>Docker</li>
+                            <li>Kafka</li>
                             <li>C++, Assembly</li>
                             <li>Java</li>
-                            <li>Kafka</li>
                         </ul>
                     </Col>
                 </Row>
