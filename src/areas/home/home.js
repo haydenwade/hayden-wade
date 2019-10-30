@@ -6,7 +6,7 @@ const HomeComponent = () => {
             <Grid>
                 <Row className='red-shadow'>
                     <Col md={6} xs={12} className='home-left-col'>
-                        <h1 className='red-underline-text'>Leverage SOFTWARE Try 2<br/>to grow your business.</h1>
+                        <h1 className='red-underline-text'>Leverage voice<br/>to grow your business.</h1>
                         <h2>Execute faster and build a stronger <br/>brand with voice.</h2>
                         <br/>
                         <Button className='red-shadow' bsSize='large' href='mailto:voice@haydenwade.com?subject=I Want to Leverage Voice For My Business&body=Hi Hayden, I would love to chat about how voice can build my brand and speed up execution.'>Get Started</Button>
