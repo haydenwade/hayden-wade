@@ -1,4 +1,5 @@
 import React from 'react';
+import withPageLayout from '../../components/withPageLayout';
 import _ from 'lodash';
 import { Grid, Row, Col, Button, FormGroup, ControlLabel, FormControl, HelpBlock, Form, Panel, Glyphicon } from 'react-bootstrap';
 import api from './services/vi-api';
@@ -189,4 +190,4 @@ function FieldGroup({ id, label, help, ...props }) {
         </FormGroup>
     );
 }
-export default Voice;
+export default withPageLayout(Voice);

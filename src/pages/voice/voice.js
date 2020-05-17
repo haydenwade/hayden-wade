@@ -1,4 +1,5 @@
 import React from 'react';
+import withPageLayout from '../../components/withPageLayout';
 import { Grid, Row, Col, Button, Image } from 'react-bootstrap';
 
 const Voice = () => {
@@ -114,4 +115,4 @@ const Voice = () => {
         )
 }
 
-export default Voice;
+export default withPageLayout(Voice);

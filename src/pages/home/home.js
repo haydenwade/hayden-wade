@@ -1,4 +1,5 @@
 import React from 'react';
+import withPageLayout from '../../components/withPageLayout';
 import { Grid, Row, Col, Button} from 'react-bootstrap';
 
 const HomeComponent = () => {
@@ -81,4 +82,4 @@ const HomeComponent = () => {
         )
 }
 
-export default HomeComponent;
+export default withPageLayout(HomeComponent);

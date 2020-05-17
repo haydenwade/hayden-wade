@@ -1,4 +1,5 @@
 import React from 'react';
+import withPageLayout from '../../components/withPageLayout';
 import { Grid, Row, Col, Image, Button} from 'react-bootstrap';
 import content from './content';
 
@@ -106,4 +107,4 @@ class Resume extends React.Component {
         );
     }
 }
-export default Resume;
+export default withPageLayout(Resume);

@@ -11,19 +11,16 @@ import './index.css';
 
 
 //areas
-import PageContainer from './shared/pageContainer/pageContainer';
-import Home from './areas/home/home';
-import AboutMe from './areas/aboutMe/aboutMe';
-import Resume from './areas/resume/resume';
-import Voice from './areas/voice/voice';
-import BriefingManager from './areas/briefingManager/briefingManager';
+import Home from './pages/home/home';
+import AboutMe from './pages/aboutMe/aboutMe';
+import Resume from './pages/resume/resume';
+import Voice from './pages/voice/voice';
+import BriefingManager from './pages/briefingManager/briefingManager';
 import Callback from './utils/auth/callback';
 import Login from './utils/auth/login';
-import BriefingContentManagerSales from './areas/voice/briefingContentManager';
-// import CustomSkillsSales from './areas/voice/customSkills';
+import BriefingContentManagerSales from './pages/voice/briefingContentManager';
 
 ReactDOM.render(
-    <PageContainer>
         <BrowserRouter>
         <Switch>
             <Route exact path='/' component={Home} />
@@ -32,13 +29,10 @@ ReactDOM.render(
             <Route path='/briefings' component={BriefingManager} />
             <Route path='/voice' component={Voice}/>
             <Route path='/briefing-content-manager' component={BriefingContentManagerSales}/>
-            {/* <Route path='/custom-skills' component={CustomSkillsSales}/> */}
             <Route path='/login' component={Login}/>
             <Route path="/callback" component={Callback} />
             <Redirect to="/" />
         </Switch>
         </BrowserRouter>
-    </PageContainer>
-
 , document.getElementById('root'));
 registerServiceWorker();
