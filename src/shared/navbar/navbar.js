@@ -14,20 +14,34 @@ class AppNavBar extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={1} href="/about">
+            {/* <NavItem eventKey={1} href="/about">
               About
+            </NavItem> */}
+            <NavItem eventKey={2} href="/experience">
+              Experience
             </NavItem>
-            <NavItem eventKey={2} href="/resume">
-              Resume
+            <NavItem eventKey={3} href="/voice">
+              Voice AI
             </NavItem>
-            <NavDropdown eventKey={4} title="Voice" id="voiceNavDropdown">
+            <NavItem eventKey={4} href="/services">
+              Services
+            </NavItem>
+            <NavDropdown eventKey={4} title="Software" id="softwareNavDropdown">
+              <MenuItem eventKey={4.1} href="/briefing-content-manager" >Briefing Content Manager</MenuItem>
+            </NavDropdown>
+            <NavItem eventKey={5} href="/about">
+              About(D)
+            </NavItem>
+            <NavItem eventKey={6} href="/home">
+              Old Home(D)
+            </NavItem>
+            {/* <NavDropdown eventKey={4} title="Voice AI" id="voiceNavDropdown">
               <MenuItem eventKey={4.1} href="/voice">Why Voice</MenuItem>
               <MenuItem eventKey={4.2} href="/briefing-content-manager" >Briefing Content Manager</MenuItem>
-              {/* <MenuItem eventKey={4.3} href="/custom-skills">Custom Skills</MenuItem> */}
-            </NavDropdown>
-            <NavItem >
+            </NavDropdown> */}
+            {/* <NavItem >
               <AuthLoginProfile/>
-            </NavItem>
+            </NavItem> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

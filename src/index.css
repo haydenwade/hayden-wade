@@ -87,3 +87,17 @@ body {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
+
+/* overright some bootstrap classes */
+/*navbar*/
+.navbar {
+    background: rgba(0,0,0,0.8);
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-brand:hover{
+    color: white;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand{
+    color: #dadada;
+}

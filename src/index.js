@@ -6,11 +6,12 @@ import registerServiceWorker from './registerServiceWorker';
 //styles
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
-import 'font-awesome/css/font-awesome.min.css';
+import 'font-awesome/css/font-awesome.min.css'; // TODO clean up other icons to use icon component from fortawesome
 import './index.css';
 
 
 //areas
+import Home2 from './pages/home/home2';
 import Home from './pages/home/home';
 import AboutMe from './pages/aboutMe/aboutMe';
 import Resume from './pages/resume/resume';
@@ -23,9 +24,11 @@ import BriefingContentManagerSales from './pages/voice/briefingContentManager';
 ReactDOM.render(
         <BrowserRouter>
         <Switch>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/' component={Home2} />
+            <Route exact path='/home' component={Home} />
             <Route path='/about' component={AboutMe} />
             <Route path='/resume' component={Resume} />
+            <Route path='/experience' component={Resume} />
             <Route path='/briefings' component={BriefingManager} />
             <Route path='/voice' component={Voice}/>
             <Route path='/briefing-content-manager' component={BriefingContentManagerSales}/>
