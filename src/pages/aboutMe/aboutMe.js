@@ -1,6 +1,5 @@
 import React from 'react';
-import withPageLayout from '../../components/withPageLayout';
-import { Grid, Row, Col} from 'react-bootstrap';
+import withPageLayout from '../../components/page-container/withPageLayout';import { Grid, Row, Col} from 'react-bootstrap';
 import projects from './projects';
 
 class AboutMe extends React.Component {

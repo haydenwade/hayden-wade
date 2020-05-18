@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
-import CopyrightFooter from '../../components/copyright-footer';
-import SocialLinks from '../../components/social-links';
+import CopyrightFooter from '../../shared-components/copyright-footer';
+import SocialLinks from '../social-links';
 
 const AppFooter = () => {
     return (

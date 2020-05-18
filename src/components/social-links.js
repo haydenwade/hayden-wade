@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { faYoutube, faLinkedin, faFacebook, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
-import IconLink from './icon-link';
+import IconLink from '../shared-components/icon-link';
 
 export default function SocialLinks() {
     return (

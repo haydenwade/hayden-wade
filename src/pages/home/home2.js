@@ -1,12 +1,12 @@
 import React from 'react';
-import withPageLayout from '../../components/withPageLayout';
-import { Grid, Row, Col, Button} from 'react-bootstrap';
+import withPageLayout from '../../components/page-container/withPageLayout';
+import { Grid, Row, Col} from 'react-bootstrap';
 
 const HomeComponent = () => {
         return (
             <Grid>
                 <Row>
-                    <Col md={12} xs={12} >
+                    <Col>
                        Home
                     </Col>
                 </Row>

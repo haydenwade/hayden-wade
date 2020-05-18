@@ -1,6 +1,5 @@
 import React from 'react';
-import withPageLayout from '../../components/withPageLayout';
-import { Grid, Row, Col, Image, Button} from 'react-bootstrap';
+import withPageLayout from '../../components/page-container/withPageLayout';import { Grid, Row, Col, Image, Button} from 'react-bootstrap';
 import content from './content';
 
 class Resume extends React.Component {

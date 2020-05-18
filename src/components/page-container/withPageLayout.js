@@ -1,15 +1,15 @@
 import React from 'react';
-import AppNavBar from '../shared/navbar/navbar';
-import AppFooter from '../shared/footer/footer';
+import AppNavBar from '../navbar/navbar';
+import AppFooter from '../footer/footer';
 
 export default (Page) => {
     return () => {
         return (
-            <div>
+            <React.Fragment>
                 <AppNavBar />
                 <Page />
                 <AppFooter />
-            </div>
+            </React.Fragment>
         )
     }
 }

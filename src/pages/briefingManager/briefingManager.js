@@ -1,11 +1,10 @@
 import React from 'react';
-import withPageLayout from '../../components/withPageLayout';
-import _ from 'lodash';
+import withPageLayout from '../../components/page-container/withPageLayout';import _ from 'lodash';
 import { Grid, Row, Col, Button, FormGroup, ControlLabel, FormControl, HelpBlock, Form, Panel, Glyphicon } from 'react-bootstrap';
 import api from './services/vi-api';
 import moment from 'moment';
 import BriefingLoader from './briefingLoader';
-import FilesModal from '../../shared/filesModal/filesModal';
+import FilesModal from '../../components/filesModal/filesModal';
 
 //TODO:
 //Enhancement: checkbox 'only show titles' can expand single one from title to edit
