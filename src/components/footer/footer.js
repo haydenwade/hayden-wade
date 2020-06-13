@@ -11,7 +11,7 @@ const AppFooter = () => {
                     <hr />
                     <SocialLinks />
                     <hr />
-                    <CopyrightFooter />
+                    <CopyrightFooter beholder="Hayden Wade"/>
                 </Col>
             </Row>
         </Grid>
