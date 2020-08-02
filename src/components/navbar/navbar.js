@@ -1,6 +1,7 @@
 import React from 'react';
-import { Navbar, Nav, NavItem, NavDropdown,MenuItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import AuthLoginProfile from '../../utils/auth/components/login-profile';
+import { isLoggedIn} from '../../utils/auth/auth-service';
 
 class AppNavBar extends React.Component {
   render() {
@@ -27,11 +28,16 @@ class AppNavBar extends React.Component {
               About
             </NavItem>
             <NavDropdown eventKey={4} title="Software" id="softwareNavDropdown">
-            <MenuItem eventKey={4.1} href="/ai-swiper" >AI Swiper</MenuItem>
+              <MenuItem eventKey={4.1} href="/ai-swiper" >AI Swiper</MenuItem>
               <MenuItem eventKey={4.2} href="/briefing-content-manager" >Briefing Content Manager</MenuItem>
             </NavDropdown>
+            {isLoggedIn() &&
+              <NavItem eventKey={5} href="/briefings">
+                Briefings
+              </NavItem>
+            }
             <NavItem >
-              <AuthLoginProfile/>
+              <AuthLoginProfile />
             </NavItem>
           </Nav>
         </Navbar.Collapse>
