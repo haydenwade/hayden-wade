@@ -1,33 +1,14 @@
 import React from 'react';
-import withPageLayout from '../../components/page-container/withPageLayout';import { Grid, Row, Col} from 'react-bootstrap';
-import projects from './projects';
+import withPageLayout from '../../components/page-container/withPageLayout';
+import { Grid, Row, Col} from 'react-bootstrap';
 
 class AboutMe extends React.Component {
-    renderSingleProject(project, i) {
-        return (
-            <Row key={i}>
-                <Col md={12} xs={12} key={i}>
-                    <Row>
-                        <Col md={12} xs={12}>
-                            <h4>{project.title} <small>{project.subtitle}</small></h4>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={12} xs={12}>
-                            {project.body}
-                            <a href={project.link}>View Code</a>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
-        );
-    }
     render() {
         return (
             <Grid>
                 <Row>
                     <Col md={12} xs={12}>
-                        <h3 className='hr-black'>About Me</h3>
+                        <h1 className='hr-black'>About Me</h1>
                     </Col>
                 </Row>
                 <Row>
@@ -37,24 +18,16 @@ class AboutMe extends React.Component {
                         around the time of the first iMac (I had a green one). At the age of 13 I spent my evenings after school editing the markup of my MySpace profile;
                         this was the stepping stone to my future. In high school I took a web development class and began helping my
                         dad make websites. With little ambition for anything else and the tech industry booming I decided to go to college for Software Engineering. I attended the 
-                        University of Wisconsin - Platteville and graduate with a Bachelor's Of Science in Software Engineering in 2016. College is really when 
+                        University of Wisconsin - Platteville and graduated with a Bachelor's Of Science in Software Engineering in 2016. College is really when 
                         my mind began to flood with new ideas and creations. Working at a small startup in the basement of city hall to working at a Fortune 200 company
-                        has gave me the exposure and knowledge to build high quality software that delivers value to customers. Today I build software for clients all over the world.
+                        has given me the exposure and knowledge to build high quality software that delivers value to customers. Today I build software for clients all over the world and host
+                        the <a href="https://www.zeroplusonepodcast.com" target="_blank" rel="noopener noreferrer">Zero Plus One Podcast</a> which aims to help aspiring software engineers land 
+                        their dream job.
                     </Col>
                     <Col md={4} xs={12} className='text-center'>
                         <img src='assets/haydenwade5.jpg' alt='hayden wade is a software engineer from Minneapolis, Minnesota.' height='350'/>
                     </Col>
                 </Row>
-                <Row>
-                    <Col md={12} xs={12}>
-                        <h3 className='hr-black'>Projects</h3>
-                    </Col>
-                </Row>
-                {
-                    projects.map((project, i) => {
-                        return this.renderSingleProject(project, i)
-                    })
-                }
             </Grid>
         )
     }

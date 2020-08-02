@@ -101,3 +101,49 @@ body {
 .navbar-default .navbar-brand{
     color: #dadada;
 }
+
+.usernameInput {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    padding-bottom: 15px;
+    text-align: center;
+    width: 400px;
+    font-size: 200%;
+    letter-spacing: 3px;
+  }
+
+[data-letters-left]:before {
+content:attr(data-letters-left);
+display:inline-block;
+font-size:1em;
+width:2.5em;
+height:2.5em;
+line-height:2.5em;
+text-align:center;
+border-radius:50%;
+background: #9dc1fb;
+vertical-align:middle;
+margin-right:1em;
+color:white;
+}
+
+[data-letters-right]:after {
+    content:attr(data-letters-right);
+    display:inline-block;
+    font-size:1em;
+    width:2.5em;
+    height:2.5em;
+    line-height:2.5em;
+    text-align:center;
+    border-radius:50%;
+    background: #fba19d;
+    vertical-align:middle;
+    margin-left:1em;
+    color:white;
+    }
+
+li.nostyle {
+    list-style-type: none;
+}
