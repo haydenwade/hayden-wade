@@ -1,5 +1,6 @@
 import React from 'react';
-import withPageLayout from '../../components/page-container/withPageLayout';import { Grid, Row, Col, Image, Button} from 'react-bootstrap';
+import { Grid, Row, Col, Image, Button } from 'react-bootstrap';
+import withPageLayout from '../../components/page-container/withPageLayout';
 import content from './content';
 
 class Resume extends React.Component {
@@ -20,9 +21,9 @@ class Resume extends React.Component {
     renderImageWithDownload() {
         return (
             <Row>
-            <div className='page-img'>
-                <Image src='assets/bg10.png' alt='hayden wade resume' rounded responsive />
-                <Button href='assets/resume.pdf' bsSize='lg'>Download Resume</Button>
+                <div className='page-img'>
+                    <Image src='assets/bg10.png' alt='hayden wade resume' rounded responsive />
+                    <Button href='assets/resume.pdf' bsSize='lg'>Download Resume</Button>
                 </div>
             </Row>
         );
@@ -37,7 +38,7 @@ class Resume extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={4} xs={12}>
+                    <Col md={3} xs={12}>
                         <h4>Development Practices & Architecture</h4>
                         <ul>
                             <li>Mobile First Design</li>
@@ -48,34 +49,40 @@ class Resume extends React.Component {
                             <li>Role-Based Access Control</li>
                         </ul>
                     </Col>
-                    <Col md={4} xs={12}>
+                    <Col md={3} xs={12}>
                         <h4>Day-To-Day Comfort</h4>
                         <ul>
                             <li>React.js, Redux</li>
-                            <li>Angular & AngularJS</li>
+                            <li>Angular, AngularJS</li>
                             <li>Bootstrap</li>
                             <li>HTML5, CSS3</li>
-                            <li>JavaScript</li>
+                            <li>JavaScript, TypeScript</li>
                             <li>Node.js - Hapi.js, Express</li>
-                            <li>Enzyme, Jest, Nightwatch.js</li>
+                            <li>Enzyme, Jest</li>
+                            <li>Puppeteer, Protractor</li>
+                            <li>Terraform</li>
+                        </ul>
+                    </Col>
+                    <Col md={3} xs={12} style={{paddingTop:'40px'}}>
+                        <ul>
                             <li>RESTful Apis</li>
                             <li>C#, VB .NET</li>
                             <li>Auth0</li>
                             <li>MongoDB, Elasticsearch</li>
-                            <li>SQL</li>
+                            <li>SQL, NoSQL</li>
                             <li>ServiceStack</li>
                             <li>Socket.io</li>
                         </ul>
                     </Col>
-                    <Col md={4} xs={12}>
+                    <Col md={3} xs={12}>
                         <h4>Experience With</h4>
                         <ul>
                             <li>Docker</li>
                             <li>Alexa Skills</li>
-                            <li>AWS, Azure</li>
-                            <li>Azure DevOps, Azure Pipelines</li>
+                            <li>AWS, Azure, Heroku</li>
+                            <li>Cloud CI/CD Pipelines</li>
                             <li>Bing Maps</li>
-                            <li>Kafka</li>
+                            <li>Data Pipelines (Kafka, RabbitMQ)</li>
                             <li>C++, Assembly</li>
                             <li>Java</li>
                         </ul>
