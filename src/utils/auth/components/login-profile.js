@@ -30,7 +30,7 @@ class AuthLoginProfile extends React.Component {
             )
         }
         else {
-            return (<span className='red-underline-text' onClick={this.login}>BCM Login</span>)
+            return (<span className='red-underline-text' onClick={this.login}>Login</span>)
         }
     }
 }
