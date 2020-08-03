@@ -25,8 +25,8 @@ import AiSwiper from './pages/ai-swiper/ai-swiper';
 ReactDOM.render(
         <BrowserRouter>
         <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/home' component={Home} />
+            <Route exact path='/' component={AboutMe} />
+            {/* <Route exact path='/home' component={Home} /> */}
             <Route path='/about' component={AboutMe} />
             <Route path='/resume' component={Resume} />
             <Route path='/experience' component={Resume} />

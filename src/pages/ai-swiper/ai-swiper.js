@@ -17,7 +17,7 @@ class AiSwiper extends React.Component {
                         <br/>
                         <br/>
                         <ol>
-                            <li class="nostyle">Step 1: Building a input pipeline</li>
+                            <li class="nostyle">Step 1: Build an input pipeline</li>
                             <li class="nostyle">Step 2: Build a model</li>
                             <li class="nostyle">Step 3: Train the model</li>
                             <li class="nostyle">Step 4: Test the model</li>
