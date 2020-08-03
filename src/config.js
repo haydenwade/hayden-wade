@@ -1,5 +1,6 @@
 //DEV
 // const config = {
+//     haydenWadeApi: process.env.HAYDEN_WADE_API_URL || 'http://localhost:3002',
 //     viApi: process.env.VI_API_URL || 'http://localhost:3001',
 //     auth:{
 //         siteDomain:'https://haydenwade.com',
@@ -11,6 +12,7 @@
 // };
 //PROD
 const config = {
+    haydenWadeApi: process.env.HAYDEN_WADE_API_URL || 'http://localhost:3002',
     viApi: process.env.VI_API_URL || 'https://vi-api.herokuapp.com',
     auth:{
         siteDomain:'https://haydenwade.com',
