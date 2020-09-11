@@ -1,46 +1,59 @@
 import React from 'react';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import AuthLoginProfile from '../../utils/auth/components/login-profile';
-import { isLoggedIn} from '../../utils/auth/auth-service';
+import { isLoggedIn } from '../../utils/auth/auth-service';
 
 class AppNavBar extends React.Component {
   render() {
     return (
-      <Navbar collapseOnSelect staticTop>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="/">H/W</a>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav pullRight>
-            <NavItem eventKey={2} href="/experience">
-              Experience
-            </NavItem>
-            <NavItem eventKey={3} href="/voice">
-              Voice AI
-            </NavItem>
-            <NavItem eventKey={4} href="/services">
-              Services
-            </NavItem>
-            <NavItem eventKey={4} href="/about">
-              About
-            </NavItem>
-            <NavDropdown eventKey={4} title="Software" id="softwareNavDropdown">
-              <MenuItem eventKey={4.1} href="/ai-swiper" >AI Swiper</MenuItem>
-              <MenuItem eventKey={4.2} href="/briefing-content-manager" >Briefing Content Manager</MenuItem>
-            </NavDropdown>
-            {isLoggedIn() &&
-              <NavItem eventKey={5} href="/briefings">
-                Briefings
-              </NavItem>
-            }
-            <NavItem >
-              <AuthLoginProfile />
-            </NavItem>
+      <Navbar collapseOnSelect expand="md" variant="dark" >
+        <Container style={{padding:'none'}}>
+        <Navbar.Brand href="/">
+          H/W
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto"></Nav>
+          <Nav >
+            <Nav.Item>
+              <Nav.Link href="/experience">
+                Experience
+            </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link  href="/voice">
+                Voice AI
+            </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link  href="/services">
+                Services
+            </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link  href="/about">
+                About
+            </Nav.Link>
+            </Nav.Item>
+              <NavDropdown  title="Software" id="softwareNavDropdown" alignRight>
+                <NavDropdown.Item  href="/ai-swiper" >AI Swiper</NavDropdown.Item>
+                <NavDropdown.Item  href="/briefing-content-manager" >Briefing Content Manager</NavDropdown.Item>
+              </NavDropdown>
+              {isLoggedIn() &&
+                <Nav.Item>
+                  <Nav.Link  href="/briefings">
+                  Briefings
+              </Nav.Link>
+              </Nav.Item>
+              }
+              <Nav.Item>
+                <Nav.Link >
+                <AuthLoginProfile />
+              </Nav.Link>
+              </Nav.Item>
           </Nav>
         </Navbar.Collapse>
+        </Container>
       </Navbar>
     );
   }

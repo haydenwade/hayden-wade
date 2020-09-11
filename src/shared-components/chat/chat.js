@@ -9,53 +9,7 @@ class ChatComponent extends React.Component {
         currentUsername: "",
         chatInput: "",
         chatStarted: false,
-        messages: [
-            // {
-            //     text: `I'm excited that you want to chat with me, what questions do you have for me? Or feel free to just say hi!`,
-            //     isSelf: false,
-            //     username: 'hayden wade'
-            // },
-            // {
-            //     text: "how old are you?",
-            //     isSelf: true,
-            //     username: 'a b'
-            // },
-            // {
-            //     text: "I'm 27 years old and living life to the fullest!",
-            //     isSelf: false,
-            //     username: 'hayden wade'
-            // },
-            // {
-            //     text: "How old are you?",
-            //     isSelf: false,
-            //     username: 'hayden wade'
-            // },
-            // {
-            //     text: "I'm not telling",
-            //     isSelf: true,
-            //     username: 'a b'
-            // },
-            // {
-            //     text: "How can voice help my business?",
-            //     isSelf: true,
-            //     username: 'a b'
-            // },
-            // {
-            //     text: "Well you see speech is 10x faster than writing and you can do multiple steps in single spoken phrase.",
-            //     isSelf: false,
-            //     username: 'hayden wade'
-            // },
-            // {
-            //     text: "What kind of car do you drive?",
-            //     isSelf: true,
-            //     username: 'a b'
-            // },
-            // {
-            //     text: "I drive a honda element.",
-            //     isSelf: false,
-            //     username: 'hayden wade'
-            // },
-        ]
+        messages: []
     }
     componentDidMount() {
         this.sock.addEventHandler('event', (data) => {
@@ -70,6 +24,9 @@ class ChatComponent extends React.Component {
         if (this.nameInput) {
             this.nameInput.focus();
         }
+    }
+    componentWillUnmount(){
+        this.sock.socket.close();
     }
     addMessage = (message)=>{
         let newMessages = this.state.messages.concat([message])
@@ -130,9 +87,9 @@ class ChatComponent extends React.Component {
                                 <FormGroup>
                                     <InputGroup>
                                         <FormControl type="text" onChange={this.handleChatInput} value={this.state.chatInput} onKeyDown={this.handleKeyDownMessageSend} />
-                                        <InputGroup.Button>
-                                            <Button onClick={this.handleMessageSend} >Send</Button>
-                                        </InputGroup.Button>
+                                        <InputGroup.Append>
+                                            <Button onClick={this.handleMessageSend} variant="light">Send</Button>
+                                        </InputGroup.Append>
                                     </InputGroup>
                                 </FormGroup>
                             </Col>

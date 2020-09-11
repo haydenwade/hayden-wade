@@ -1,11 +1,5 @@
 # hayden-wade
 
-Site now includes Alexa Flash Briefing Content Manager(BCM). BCM is integrated with Amazon Cloud Services (S3 bucket), Auth0 for authentication.
+Code base for haydenwade.com. The site includes Alexa Flash Briefing Content Manager(BCM) and a virtual assistant (aka chatbot) that allows for manual intervention via twilio sms. BCM is integrated with Amazon Cloud Services (S3 bucket), Auth0 for authentication.
 
-If you want to try it out send me a message!
-
-Backend for this site is built with node.js.
-
-## libraries
-http://ianlunn.github.io/Hover/#effects
-https://reactjsexample.com/svg-component-to-create-placeholder-loading-like-facebook-cards-loading/
+Backend for this site is built with node.js and can be found here: [hayden-wade-api](https://github.com/haydenwade/hayden-wade-api)

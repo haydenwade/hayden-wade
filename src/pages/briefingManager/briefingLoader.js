@@ -3,11 +3,10 @@ import ContentLoader from "react-content-loader"
 
 const BriefingLoader = props => (
         <ContentLoader
-            height={160}
-            width={400}
+            viewBox="0 0 380 70"
             speed={1}
-            primaryColor="#6c6c6c"
-            secondaryColor="#ecebeb"
+            primarycolor="#6c6c6c"
+            secondarycolor="#ecebeb"
             {...props}
         >
             <rect x="30" y="15" rx="3" ry="3" width="30" height="6.4" />

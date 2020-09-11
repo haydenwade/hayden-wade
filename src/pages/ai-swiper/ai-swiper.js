@@ -1,10 +1,11 @@
 import React from 'react';
-import withPageLayout from '../../components/page-container/withPageLayout'; import { Grid, Row, Col } from 'react-bootstrap';
+import withPageLayout from '../../components/page-container/withPageLayout'; 
+import { Container, Row, Col } from 'react-bootstrap';
 
 class AiSwiper extends React.Component {
     render() {
         return (
-            <Grid>
+            <Container>
                 <Row>
                     <Col>
                         <h1 className='hr-black'>AI Swiper</h1>
@@ -17,12 +18,12 @@ class AiSwiper extends React.Component {
                         <br/>
                         <br/>
                         <ol>
-                            <li class="nostyle">Step 1: Build an input pipeline</li>
-                            <li class="nostyle">Step 2: Build a model</li>
-                            <li class="nostyle">Step 3: Train the model</li>
-                            <li class="nostyle">Step 4: Test the model</li>
-                            <li class="nostyle">Step 5: Improve the model (repeat the process)</li>
-                            <li class="nostyle">Step 6: Automate swiping</li>
+                            <li className="nostyle">Step 1: Build an input pipeline</li>
+                            <li className="nostyle">Step 2: Build a model</li>
+                            <li className="nostyle">Step 3: Train the model</li>
+                            <li className="nostyle">Step 4: Test the model</li>
+                            <li className="nostyle">Step 5: Improve the model (repeat the process)</li>
+                            <li className="nostyle">Step 6: Automate swiping</li>
                         </ol>
 
                         First I needed input data and lots of it. I knew exactly where to get it, Tinder, Bumble, almost any dating app for that matter, and even Google. I started by building a React.js UI on top of Tinder's API. This would allow me to use Tinder like normal
@@ -42,7 +43,7 @@ class AiSwiper extends React.Component {
                         <strong>Source Code: </strong><a href="https://github.com/haydenwade/ai-swiper" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </Col>
                 </Row>
-            </Grid>
+            </Container>
         )
     }
 }
