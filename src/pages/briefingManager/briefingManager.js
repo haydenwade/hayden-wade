@@ -1,10 +1,13 @@
 import React from 'react';
-import withPageLayout from '../../components/page-container/withPageLayout';import _ from 'lodash';
-import { Grid, Row, Col, Button, FormGroup, ControlLabel, FormControl, HelpBlock, Form, Panel, Glyphicon } from 'react-bootstrap';
+import withPageLayout from '../../components/page-container/withPageLayout';
+import _ from 'lodash';
+import { Container, Row, Col, Button, Form, Card } from 'react-bootstrap';
 import api from './services/vi-api';
 import moment from 'moment';
 import BriefingLoader from './briefingLoader';
 import FilesModal from '../../components/filesModal/filesModal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFolderOpen, faPlus, faSave } from '@fortawesome/free-solid-svg-icons'
 
 //TODO:
 //Enhancement: checkbox 'only show titles' can expand single one from title to edit
@@ -18,7 +21,7 @@ class Voice extends React.Component {
             loading: true,
             briefings: [],
             showFilesModal: false,
-            files:[]
+            files: []
         };
     }
     componentDidMount() {
@@ -28,14 +31,14 @@ class Voice extends React.Component {
     }
     //#region files modal
     handleFilesModalSave = (newFiles) => {
-        console.log('saving',newFiles);
-        this.setState({...this.state, showFilesModal:false, files:newFiles})
+        console.log('saving', newFiles);
+        this.setState({ ...this.state, showFilesModal: false, files: newFiles })
     };
     handleCloseFilesModal = () => {
-        this.setState({...this.state, showFilesModal:false})
+        this.setState({ ...this.state, showFilesModal: false })
     }
     handleOpenFilesModal = () => {
-        this.setState({...this.state, showFilesModal:true})
+        this.setState({ ...this.state, showFilesModal: true })
     }
     //#endregion
     //#region change handlers for briefings
@@ -49,13 +52,13 @@ class Voice extends React.Component {
     }
     handleBriefingUpdateClicked = (e) => {
         api.updateBriefings(this.state.briefings, this.state.files).then((res) => {
-            api.getBriefings().then((res)=>{
+            api.getBriefings().then((res) => {
                 this.setState({ ...this.state, briefings: res });
             });
         });
     }
     handleBriefingDeleteClicked = (e) => {
-        let briefings = Object.assign({},this.state).briefings;
+        let briefings = Object.assign({}, this.state).briefings;
         _.remove(briefings, (b) => {
             return b.uuid === e.target.id;
         });
@@ -68,7 +71,7 @@ class Voice extends React.Component {
                 mainText: '',
                 titleText: '',
                 redirectionUrl: '',
-                filename:'',
+                filename: '',
                 publishDate: moment().format('YYYY-MM-DD')
             }
         ];
@@ -79,11 +82,11 @@ class Voice extends React.Component {
     //#endregion
     renderSingleBriefing(briefing, i) {
         return (
-            <Row key={i}>
+            <Row key={i} style={{paddingBottom:'10px'}}>
                 <Col md={12} xs={12}>
-                    <Panel>
-                        <Panel.Body>
-                            <Form horizontal>
+                    <Card >
+                        <Card.Body>
+                            <Form>
                                 <FieldGroup
                                     id={briefing.uuid}
                                     name="titleText"
@@ -101,20 +104,20 @@ class Voice extends React.Component {
                                     value={briefing.publishDate}
                                     onChange={this.handleChange}
                                 />
-                                <FormGroup controlId={briefing.uuid}>
-                                    <Col componentClass={ControlLabel} sm={2}>
+                                <Form.Group as={Row} controlId={briefing.uuid}>
+                                    <Form.Label column sm={2}>
                                         Content
-                                    </Col>
+                                    </Form.Label>
                                     <Col sm={10}>
-                                        <FormControl
+                                        <Form.Control
                                             name="mainText"
-                                            componentClass="textarea"
+                                            as="textarea"
                                             placeholder="Today's tip..."
                                             value={briefing.mainText}
                                             onChange={this.handleChange}
                                         />
                                     </Col>
-                                </FormGroup>
+                                </Form.Group>
                                 <FieldGroup
                                     id={briefing.uuid}
                                     name="redirectionUrl"
@@ -132,18 +135,18 @@ class Voice extends React.Component {
                                     placeholder="Enter the filename for this briefing"
                                     value={briefing.filename}
                                     onChange={this.handleChange}
-                                />                 
-                                <Button className="pull-right" id={briefing.uuid} onClick={this.handleBriefingDeleteClicked}>Delete</Button>
+                                />
+                                <Button className="float-right" variant="light" id={briefing.uuid} onClick={this.handleBriefingDeleteClicked}>Delete</Button>
                             </Form>
-                        </Panel.Body>
-                    </Panel>
+                        </Card.Body>
+                    </Card>
                 </Col>
             </Row>
         )
     }
     render() {
         return (
-            <Grid>
+            <Container>
                 <Row>
                     <Col md={12} xs={12}>
                         <h3 className='hr-black'>Briefing Manager</h3>
@@ -151,10 +154,15 @@ class Voice extends React.Component {
                 </Row>
                 <Row>
                     <Col md={12} xs={12}>
-                        Manage Your Briefings:<br/>
-                        <Button className="pull-right btn-primary" onClick={this.handleBriefingUpdateClicked}><Glyphicon glyph="floppy-disk" /> Publish</Button>
-                        <Button className="pull-right btn-default" onClick={this.handleCreateNewBriefing}><Glyphicon glyph="plus" /> New Briefing</Button>
-                        <Button className="pull-right btn-default" onClick={this.handleOpenFilesModal}><Glyphicon glyph="folder-open" /> Files</Button>
+                        Manage Your Briefings:<br />
+                        <Button className="float-right" variant="primary" onClick={this.handleBriefingUpdateClicked}><FontAwesomeIcon icon={faSave} /> Publish</Button>
+                        <Button className="float-right" variant="light" onClick={this.handleCreateNewBriefing}><FontAwesomeIcon icon={faPlus} /> New Briefing</Button>
+                        <Button className="float-right" variant="light" onClick={this.handleOpenFilesModal}><FontAwesomeIcon icon={faFolderOpen} /> Files</Button>
+
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
                         {
                             this.state.loading ? <BriefingLoader /> : this.state.briefings.map((briefing, i) => {
                                 return this.renderSingleBriefing(briefing, i);
@@ -168,25 +176,24 @@ class Voice extends React.Component {
                     show={this.state.showFilesModal}
                     handleClose={this.handleCloseFilesModal}
                     handleSave={this.handleFilesModalSave}
-                    fileTypes={['audio/mp3','video/mp4']}
+                    fileTypes={['audio/mp3', 'video/mp4']}
                     files={this.state.files}
                 />
-            </Grid>
+            </Container>
         )
     }
 }
 
-function FieldGroup({ id, label, help, ...props }) {
+function FieldGroup({ id, label, ...props }) {
     return (
-        <FormGroup controlId={id}>
-            <Col componentClass={ControlLabel} sm={2}>
+        <Form.Group as={Row} controlId={id}>
+            <Form.Label column sm={2}>
                 {label}
-            </Col>
+            </Form.Label>
             <Col sm={10}>
-                <FormControl {...props} />
-                {help && <HelpBlock>{help}</HelpBlock>}
+                <Form.Control {...props} />
             </Col>
-        </FormGroup>
+        </Form.Group>
     );
 }
 export default withPageLayout(Voice);

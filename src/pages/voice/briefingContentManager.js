@@ -1,9 +1,12 @@
 import React from 'react';
-import withPageLayout from '../../components/page-container/withPageLayout';import { Grid, Row, Col, Button } from 'react-bootstrap';
+import withPageLayout from '../../components/page-container/withPageLayout';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSignInAlt, faPencilAlt, faSave } from '@fortawesome/free-solid-svg-icons'
 
 const BriefingContentManager = ()=> {
         return (
-            <Grid>
+            <Container>
                 <Row>
                     <Col md={12} xs={12}>
                         <h1 className='hr-black'>Briefing Content Manager</h1>
@@ -23,20 +26,20 @@ const BriefingContentManager = ()=> {
                 </Row>
                 <Row>
                     <Col md={4} xs={12} className="text-center">
-                        <i className="fa fa-sign-in fa-5x"></i>
+                        <FontAwesomeIcon icon={faSignInAlt} size="5x"></FontAwesomeIcon>
                         <br />
                         <h3>Step 1: Sign Up, Login</h3>
                         If you do not have an account yet please sign up for free trial. Email <a href='mailto:solutions@haydenwade.com?subject=Sign Me Up For BCM&body=Hi Hayden, I would love to get a free trail! What do I need to do?'>solutions@haydenwade.com</a> to get the free trial started.
                     </Col>
                     <Col md={4} xs={12} className="text-center">
-                        <i className="fa fa-pencil fa-5x"></i>
+                        <FontAwesomeIcon icon={faPencilAlt} size="5x"></FontAwesomeIcon>
                         <br />
                         <h3>Step 2: Modify Content</h3>
                         After signing in you can create, update, delete briefings from your feed. Briefings will be played based on their publish date. 
                         You can also upload media files that will be played instead of plain text. The text you enter will also appear in the Alexa iOS and Android apps.
                     </Col>
                     <Col md={4} xs={12} className="text-center">
-                        <i className="fa fa-floppy-o fa-5x"></i>
+                        <FontAwesomeIcon icon={faSave} size="5x"></FontAwesomeIcon>
                         <br />
                         <h3>Step 3: Publish</h3>
                         When you click 'Publish' all changes will go live, meaning your clients or followers will now hear your latest news.
@@ -45,7 +48,7 @@ const BriefingContentManager = ()=> {
                 <Row>
                     <Col md={12} xs={12} className="text-center">
                         <br/>
-                        <Button className='red-shadow' bsSize='large' href='mailto:solutions@haydenwade.com?subject=Sign Me Up For Briefing Content Manager&body=Hi Hayden, I would love to get started using the Briefing Content Manager, what are the next steps?'>Sign Up</Button>                    
+                        <Button className='red-shadow' size='lg' variant="light" href='mailto:solutions@haydenwade.com?subject=Sign Me Up For Briefing Content Manager&body=Hi Hayden, I would love to get started using the Briefing Content Manager, what are the next steps?'>Sign Up</Button>                    
                     </Col>
                 </Row>
                 {/* <Row>
@@ -60,7 +63,7 @@ const BriefingContentManager = ()=> {
                         Contact us and we can get you setup on a different platform. We offer both voice and chat bots over SMS, slack, skype, email, and others upon request.
                     </Col>
                 </Row>
-            </Grid>
+            </Container>
         )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Row, Col, Image, Button } from 'react-bootstrap';
+import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 import withPageLayout from '../../components/page-container/withPageLayout';
 import content from './content';
 
@@ -22,15 +22,15 @@ class Resume extends React.Component {
         return (
             <Row>
                 <div className='page-img'>
-                    <Image src='assets/bg10.png' alt='hayden wade resume' rounded responsive />
-                    <Button href='assets/resume.pdf' bsSize='lg'>Download Resume</Button>
+                    <Image src='assets/bg10.png' alt='hayden wade resume' rounded fluid />
+                    <Button variant="light" href='assets/resume.pdf' size='lg'>Download Resume</Button>
                 </div>
             </Row>
         );
     }
     render() {
         return (
-            <Grid>
+            <Container>
                 {this.renderImageWithDownload()}
                 <Row>
                     <Col md={12} xs={12}>
@@ -109,7 +109,7 @@ class Resume extends React.Component {
                         Bachelor's of Science, Software Engineering - Magna Cum Laude, Deans List
                     </Col>
                 </Row>
-            </Grid>
+            </Container>
         );
     }
 }

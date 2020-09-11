@@ -1,11 +1,11 @@
 import React from 'react';
 import withPageLayout from '../../components/page-container/withPageLayout';
-import { Grid, Row, Col} from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 
 class AboutMe extends React.Component {
     render() {
         return (
-            <Grid>
+            <Container>
                 <Row>
                     <Col md={12} xs={12}>
                         <h1 className='hr-black'>About Me</h1>
@@ -28,7 +28,7 @@ class AboutMe extends React.Component {
                         <img src='assets/haydenwade5.jpg' alt='hayden wade is a software engineer from Minneapolis, Minnesota.' height='350'/>
                     </Col>
                 </Row>
-            </Grid>
+            </Container>
         )
     }
 }

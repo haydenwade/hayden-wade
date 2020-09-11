@@ -1,7 +1,6 @@
 //DEV
 // const config = {
 //     haydenWadeApi: process.env.HAYDEN_WADE_API_URL || 'http://localhost:3002',
-//     viApi: process.env.VI_API_URL || 'http://localhost:3001',
 //     auth:{
 //         siteDomain:'https://haydenwade.com',
 //         domain: 'haydenty.auth0.com',
@@ -12,8 +11,7 @@
 // };
 //PROD
 const config = {
-    haydenWadeApi: process.env.HAYDEN_WADE_API_URL || 'http://localhost:3002',
-    viApi: process.env.VI_API_URL || 'https://vi-api.herokuapp.com',
+    haydenWadeApi: process.env.HAYDEN_WADE_API_URL || 'http://hw-1680842757.us-east-1.elb.amazonaws.com',
     auth:{
         siteDomain:'https://haydenwade.com',
         domain: 'haydenty.auth0.com',

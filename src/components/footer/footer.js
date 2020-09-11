@@ -1,11 +1,11 @@
 import React from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import CopyrightFooter from '../../shared-components/copyright-footer';
 import SocialLinks from '../social-links';
 
 const AppFooter = () => {
     return (
-        <Grid>
+        <Container>
             <Row>
                 <Col className="text-center">
                     <hr />
@@ -14,7 +14,7 @@ const AppFooter = () => {
                     <CopyrightFooter beholder="Hayden Wade"/>
                 </Col>
             </Row>
-        </Grid>
+        </Container>
     );
 }
 export default AppFooter;

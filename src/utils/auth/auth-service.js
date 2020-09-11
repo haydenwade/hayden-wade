@@ -33,6 +33,9 @@ export function getUserProfile() {
     } else {
       if (isLoggedIn()) {
         auth.client.userInfo(getAccessToken(), (err, profile) => {
+          if(err){
+            reject(err);
+          }
           userProfile = profile;
           resolve(profile);
         });

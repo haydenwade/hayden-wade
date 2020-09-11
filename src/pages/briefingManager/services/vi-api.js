@@ -4,7 +4,7 @@ import config from '../../../config';
 import { getAccessToken, getUserProfile } from '../../../utils/auth/auth-service';
 
 const a = axios.create({
-    baseURL: config.viApi,
+    baseURL: config.haydenWadeApi,
     headers: {
         'content-type': 'application/json',
         'Authorization': `Bearer ${getAccessToken()}`

@@ -1,19 +1,23 @@
 import React from 'react';
-import withPageLayout from '../../components/page-container/withPageLayout'; import { Grid, Row, Col, Button, Image } from 'react-bootstrap';
+import withPageLayout from '../../components/page-container/withPageLayout';
+import { Container, Row, Col, Button, Image } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMicrophone, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import { faAmazon, faWindows, faGoogle, faApple } from '@fortawesome/free-brands-svg-icons'
 
 const Voice = () => {
     return (
-        <Grid>
+        <Container>
             <Row>
-            <Col md={6} >
+                <Col md={6} >
                     <h1 className='red-underline-text'>Leverage voice <br />to grow your business.</h1>
                     <h2>Execute faster and build a stronger <br />brand with voice.</h2>
                 </Col>
                 <Col md={6}>
                     <Row>
                         <div className='page-img'>
-                            <Image src='assets/voicebanner3.png' alt='voice by hayden' rounded responsive />
-                            <Button href='mailto:solutions@haydenwade.com?subject=I Need Voice ASAP&body=Hi Hayden, I would love to chat about how voice can save my company time and money.' bsSize='lg'>Contact Me<br />To Get Started</Button>
+                            <Image src='assets/voicebanner3.png' alt='voice by hayden' rounded fluid />
+                            <Button href='mailto:solutions@haydenwade.com?subject=I Need Voice ASAP&body=Hi Hayden, I would love to chat about how voice can save my company time and money.' size='lg' variant="light">Contact Me<br />To Get Started</Button>
                         </div>
                     </Row>
                 </Col>
@@ -26,7 +30,7 @@ const Voice = () => {
             </Row>
             <Row>
                 <Col md={6} xs={12} className="text-center">
-                    <i className="fa fa-pencil-square-o fa-5x"></i>
+                    <FontAwesomeIcon icon={faPencilAlt} size="5x"></FontAwesomeIcon>
                     <br />
                     <h4>Briefing Content Manager</h4>
                         Briefing Content Manager (BCM) provides a way to manage Alexa flash briefing content at anytime from anywhere.
@@ -34,7 +38,7 @@ const Voice = () => {
                         BCM supports media-files (mp3 and mp4) and text-to-speech (TTS). <a href="/briefing-content-manager">Read more.</a>
                 </Col>
                 <Col md={6} xs={12} className="text-center">
-                    <i className="fa fa-microphone fa-5x"></i>
+                    <FontAwesomeIcon icon={faMicrophone} size="5x"></FontAwesomeIcon>
                     <br />
                     <h4>Custom Skill Development</h4>
                         For more complex tasks I will work one on one to build a custom skill to automate and stream line processes, as well as create a voice that expands your brand.
@@ -55,12 +59,20 @@ const Voice = () => {
             <Row>
                 <Col md={12} xs={12}>
                     <h3>Choosing a Platform and Device</h3>
-                    <div className='text-center'>
-                        <i className="p-right fa fa-amazon fa-5x"></i>
-                        <i className="p-right fa fa-windows fa-5x"></i>
-                        <i className="p-right fa fa-google fa-5x"></i>
-                        <i className="fa fa-apple fa-5x"></i>
-                    </div>
+                        <Row className="justify-content-md-center">
+                            <Col xs lg="2">
+                                <FontAwesomeIcon icon={faAmazon} size="5x"></FontAwesomeIcon>
+                            </Col>
+                            <Col xs lg="2">
+                                <FontAwesomeIcon icon={faWindows} size="5x"></FontAwesomeIcon>
+                            </Col>
+                            <Col xs lg="2">
+                                <FontAwesomeIcon icon={faGoogle} size="5x"></FontAwesomeIcon>
+                            </Col>
+                            <Col xs lg="2">
+                                <FontAwesomeIcon icon={faApple} size="5x"></FontAwesomeIcon>
+                            </Col>
+                        </Row>
                     <br />
                         When it comes to choosing the platforms and devices you want your application to support it can be very difficult because you want it to be available to everyone.
                         Well let me tell you with voice it is easier, kind of. The list of platforms to choose from include Amazon's Alexa, Microsoft's Cortana, Google's Assistant,
@@ -101,7 +113,7 @@ const Voice = () => {
                         process automation but with voice you take it one step further because you can now do the same thing that would take multiple steps in just one sentence; do more with less.
                         <div className="text-center">
                         <br />
-                        <i className="fa fa-microphone fa-2x"></i>
+                        <FontAwesomeIcon icon={faMicrophone} size="2x"></FontAwesomeIcon>
                         <br />
                             "The reason there are 60 year old men in here texting… it's faster. […]
                             Speed is something we are addicted to. Do you know why you don't care about privacy? 'Cause you're willing to give it up for speed." ~ Gary Vaynerchuk
@@ -114,7 +126,7 @@ const Voice = () => {
                     </div>
                 </Col>
             </Row>
-        </Grid>
+        </Container>
     )
 }
 
