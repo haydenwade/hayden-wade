@@ -11,6 +11,8 @@ class HomeComponent extends React.Component {
                     <Col className="text-center">
                         <h1>Hi, I'm Hayden Wade.</h1>
                         If you ask me something I'll reply or my  AI assistant, Steve, will if I'm busy adventuring or at work.
+                        <br/>
+                        [Beta]
                     </Col>
                 </Row>
                 <Row>
