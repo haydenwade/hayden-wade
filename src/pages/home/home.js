@@ -10,19 +10,19 @@ class HomeComponent extends React.Component {
                 <Row>
                     <Col className="text-center">
                         <h1>Hi, I'm Hayden Wade.</h1>
-                        If you ask me something I'll reply or my  AI assistant, Steve, will if I'm busy adventuring or at work.
+                        {/* If you ask me something I'll reply or my  AI assistant, Steve, will if I'm busy adventuring or at work.
                         <br/>
-                        [Beta]
+                        [Beta] */}
                     </Col>
                 </Row>
-                <Row>
+                {/* <Row>
                     <Chat />
                 </Row>
                 <Row>
                     <Col className="text-center">
                         <a href="/about"><small>Read about me instead?</small></a>
                     </Col>
-                </Row>
+                </Row> */}
                 <Row>
                     <Col>
                         <Image src='assets/sevenmagicmtns.jpg' alt='Seven Magic Mountains, Las Vegas, Nevada' fluid/> 
