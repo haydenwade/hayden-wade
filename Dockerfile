@@ -1,19 +1,13 @@
-# Base image
-FROM node:13.12.0-alpine as react-build
-
-# Create app directory
-WORKDIR /usr/src/app
-
-# copy everything except .dockerignore to working directory
+# Build Environment
+FROM node:14.8.0-alpine as build
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --silent
+# Have a .dockerignore file ignoring node_modules and build
 COPY . ./
-
-# RUN npm install react-scripts -g
-RUN npm install
 RUN npm run build
-
-FROM nginx:alpine
-# copy build artifacts
-COPY --from=react-build /usr/src/app/build /usr/share/nginx/html
-# expose and serve files
-EXPOSE 80
+# Production
+FROM nginx:stable-alpine
+COPY --from=build /app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
 CMD ["nginx", "-g", "daemon off;"]

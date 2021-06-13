@@ -6,4 +6,4 @@ Backend for this site is built with node.js and can be found here: [hayden-wade-
 
 ## Docker Setup
 - `docker build . -t hw-dot-com`
-- `docker run --name hayden-wade-api -p 3000:80 hw-dot-com`
+- `docker run --name hw-dot-com -p 3000:80 hw-dot-com`
