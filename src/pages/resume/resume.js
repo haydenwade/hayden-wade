@@ -41,50 +41,56 @@ class Resume extends React.Component {
                     <Col md={3} xs={12}>
                         <h4>Development Practices & Architecture</h4>
                         <ul>
-                            <li>Mobile First Design</li>
-                            <li>Cross-browser Support</li>
-                            <li>Agile Methodology</li>
-                            <li>CI/CD Pipelines</li>
+                            <li>Cloud Architecture</li>
                             <li>Microservice Architecture</li>
                             <li>Role-Based Access Control</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Mobile First Design</li>
+                            <li>Agile Methodology</li>
+                            <li>Scrum</li>
                         </ul>
                     </Col>
                     <Col md={3} xs={12}>
                         <h4>Day-To-Day Comfort</h4>
                         <ul>
-                            <li>React.js, Redux</li>
-                            <li>Angular, AngularJS</li>
-                            <li>Bootstrap</li>
-                            <li>HTML5, CSS3</li>
+                            <li>AWS</li>
+                            <li>Kafka</li>
+                            <li>Docker</li>
+                            <li>Node.js</li>
                             <li>JavaScript, TypeScript</li>
-                            <li>Node.js - Hapi.js, Express</li>
-                            <li>Enzyme, Jest</li>
-                            <li>Puppeteer, Protractor</li>
-                            <li>Terraform</li>
+                            <li>Redis</li>
+                            <li>Auth0</li>
+                            <li>Postgres</li>
+                            <li>Elasticsearch</li>
+                           
                         </ul>
                     </Col>
                     <Col md={3} xs={12} style={{paddingTop:'40px'}}>
                         <ul>
-                            <li>RESTful Apis</li>
+                            <li>Terraform</li>
+                            <li>RESTful APIs</li>
                             <li>C#, VB .NET</li>
-                            <li>Auth0</li>
-                            <li>MongoDB, Elasticsearch</li>
                             <li>SQL, NoSQL</li>
-                            <li>ServiceStack</li>
-                            <li>Socket.io</li>
+                            <li>React.js, Redux</li>
+                            <li>HLS</li>
+                            <li>Squadcast</li>
+                            <li>Prometheus, Grafana</li>
+                            <li>Jest</li>
                         </ul>
                     </Col>
                     <Col md={3} xs={12}>
                         <h4>Experience With</h4>
                         <ul>
-                            <li>Docker</li>
                             <li>Alexa Skills</li>
-                            <li>AWS, Azure, Heroku</li>
-                            <li>Cloud CI/CD Pipelines</li>
+                            <li>Azure, Heroku</li>
                             <li>Bing Maps</li>
-                            <li>Data Pipelines (Kafka, RabbitMQ)</li>
-                            <li>C++, Assembly</li>
+                            <li>RabbitMQ</li>
                             <li>Java</li>
+                            <li>Angular, AngularJS</li>
+                            <li>HTML5, CSS3, Bootstrap</li>
+                            <li>Puppeteer, Protractor</li>
+                            <li>MongoDB</li>
+                            <li>Socket.io</li>
                         </ul>
                     </Col>
                 </Row>

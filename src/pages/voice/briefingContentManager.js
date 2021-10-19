@@ -1,5 +1,6 @@
 import React from 'react';
 import withPageLayout from '../../components/page-container/withPageLayout';
+import withArchives from '../../components/page-container/withArchives';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt, faPencilAlt, faSave } from '@fortawesome/free-solid-svg-icons'
@@ -67,4 +68,4 @@ const BriefingContentManager = ()=> {
         )
 }
 
-export default withPageLayout(BriefingContentManager);
+export default withPageLayout(withArchives(BriefingContentManager));

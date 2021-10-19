@@ -1,5 +1,7 @@
 import React from 'react';
 import withPageLayout from '../../components/page-container/withPageLayout';
+import withArchives from '../../components/page-container/withArchives';
+
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMicrophone, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
@@ -130,4 +132,4 @@ const Voice = () => {
     )
 }
 
-export default withPageLayout(Voice);
+export default withPageLayout(withArchives(Voice));

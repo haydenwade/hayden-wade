@@ -9,13 +9,8 @@ const ServicesComponent = () => {
             <Container>
                 <Row>
                     <Col md={12} xs={12}>
-                        <h1 className='hr-black'>Software Engineer & Voice Platform Fanatic</h1>
-                        Hey there! I'm Hayden, a <strong>software engineer</strong> and <strong>voice platform fanatic</strong>.
-                        <br />
-                        Putting it simply: I solve problems by building quality software that saves my clients time and money.
-                        By pairing software solutions with voice platforms, like Alexa, clients streamline their processes and build brand equity with their customers.
-                        <br />
-                        Ready to start? I offer consultations and SaaS products to business and individuals who want to gain the competitive edge in their industry.
+                        <h1 className='hr-black'>Services</h1>
+                        I solve problems by building quality software that saves my clients time and money. I offer consultations to businesses and individuals who want to gain the competitive edge in their industry.
                         <hr/>
                     </Col>
                 </Row>
@@ -24,7 +19,7 @@ const ServicesComponent = () => {
                         <FontAwesomeIcon icon={faCode} size="5x"></FontAwesomeIcon>
                         <br />
                         <h2>Software Consulting</h2>
-                        For all your software needs I am happy to consult. Solution design and architecture, agile software development, test automation, data pipelines, infrastructure as code, web applications, and user experience.
+                        For all your software needs I am happy to consult. Solution design and architecture, agile software development, test automation, data pipelines, infrastructure as code, web applications, and user experience. Learn more at <a href="https://www.teamwawe.com" target="_blank" rel="noopener noreferrer">teamwawe.com</a>
                     </Col>
                     <Col md={6} xs={12} className="text-center">
                         <FontAwesomeIcon icon={faUserCircle} size="5x"></FontAwesomeIcon>

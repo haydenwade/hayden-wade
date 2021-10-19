@@ -21,11 +21,6 @@ class AppNavBar extends React.Component {
             </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link  href="/voice">
-                Voice AI
-            </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
               <Nav.Link  href="/services">
                 Services
             </Nav.Link>
@@ -38,6 +33,7 @@ class AppNavBar extends React.Component {
               <NavDropdown  title="Software" id="softwareNavDropdown" alignRight>
                 <NavDropdown.Item  href="/ai-swiper" >AI Swiper</NavDropdown.Item>
                 <NavDropdown.Item  href="/briefing-content-manager" >Briefing Content Manager</NavDropdown.Item>
+                <NavDropdown.Item  href="/voice" >Voice AI</NavDropdown.Item>
               </NavDropdown>
               {isLoggedIn() &&
                 <Nav.Item>

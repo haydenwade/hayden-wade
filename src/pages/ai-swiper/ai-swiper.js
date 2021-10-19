@@ -1,5 +1,7 @@
 import React from 'react';
 import withPageLayout from '../../components/page-container/withPageLayout'; 
+import withArchives from '../../components/page-container/withArchives';
+
 import { Container, Row, Col } from 'react-bootstrap';
 
 class AiSwiper extends React.Component {
@@ -47,4 +49,4 @@ class AiSwiper extends React.Component {
         )
     }
 }
-export default withPageLayout(AiSwiper);
+export default withPageLayout(withArchives(AiSwiper));
