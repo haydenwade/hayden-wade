@@ -12,9 +12,9 @@ Backend for this site is built with node.js and can be found here: [hayden-wade-
 # Budget Hosting/Deployment steps
 ## Build and Push to DockerHub
 - `docker build . -t haydenwade/hayden-wade-dot-com`
-- `docker tag haydenwade/hayden-wade-dot-com haydenwade/hayden-wade-dot-com:v2.0.0`
+- `docker tag haydenwade/hayden-wade-dot-com haydenwade/hayden-wade-dot-com:v2.0.1`
 - `docker tag haydenwade/hayden-wade-dot-com haydenwade/hayden-wade-dot-com:latest`
-- `docker push haydenwade/hayden-wade-dot-com:v2.0.0`
+- `docker push haydenwade/hayden-wade-dot-com:v2.0.1`
 - `docker push haydenwade/hayden-wade-dot-com:latest`
 
 ## Remote into server
