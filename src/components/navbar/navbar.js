@@ -12,7 +12,7 @@ class AppNavBar extends React.Component {
           H/W
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" >
           <Nav className="mr-auto"></Nav>
           <Nav >
             <Nav.Item>
