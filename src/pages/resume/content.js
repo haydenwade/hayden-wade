@@ -1,6 +1,6 @@
 const content = [
     {
-        "title":"STAFF SOFTWARE ENGINEER - VIDEO SERVICES PLATFORM AND API TEAM",
+        "title":"STAFF SOFTWARE ENGINEER - VIDEO SERVICES PLATFORM TEAM, API TEAM",
         "subtitle":"Alula, St. Paul, Minnesota, October 2021 – Current",  
         "body":"Worked with product owner to define and communicate requirements to new camera provider. Designed a secure and scalable solution to integrate new camera provider using AWS. Documented solution into work items and communicated solution with team after soliciting feedback. Provided estimates for completing the integration and highlighted cross team and external dependencies. Worked directly with new camera provider to ensure requirements met the specification and troubleshooted issues. Provided project status updates to project stake holders. Enhanced backend services to support new camera models from existing camera providers. Scaled infrastructure to account for seasonal volume. Maintained and monitored MSK cluster and RDS Postgres cluster for organization. Mentored direct reports and defined a career path to increase employee retention. Transitioned off of the Video Services Platform Team and joined the API Team. Set goals and expectations with new team. Established new processes to increase team sprint velocity, reduce PR dwell time, and increase time to market. Primary technologies utilized: AWS, Node.js, Terraform."
     },
@@ -16,7 +16,7 @@ const content = [
     },
     {
         "title":"SOFTWARE ENGINEER II - NAVISPHERE VISION TEAM",
-        "subtitle":"C.H. Robinson, Eden Prairie, Minnesota, January 2018 - Current",
+        "subtitle":"C.H. Robinson, Eden Prairie, Minnesota, January 2018 - August 2019",
         "body":"Enhanced and maintained eCommerce application that provides customers a view into their global supply chain. Organized and led team of 5 engineers to build custom Alexa Skill and presented it to c-level executives, received budget to expand voice app. Worked closely with data scientists to provide in-app predictive analytics, researched 3rd party APIs, and created proof of concepts. Implemented new customers on a strict deadline. Streamlined customer implementations by designing, implementing, and testing new web application. Reduced customer implementation timelines by leveraging software and driving standardization. Built software to consume multiple sources of data from enterprise service bus (RabbitMQ, Kafka). Worked with infrastructure team to migrate our application to the cloud (Azure). Rewrote application from AngularJS to React.js with Redux. Built npm package to support authentication and authorization that is used across all micro services. As lead engineer on team I mentored a growing team of engineers. Improved teams interview process for multiple roles (SE, BA, QA, PM) and led technical phone screens and on-site interviews. Primary code utilization included React.js, Redux, AngularJS, Node.js (Hapi.js), Docker, SQL, MongoDB, Elasticsearch, Enzyme, Jest, Nightwatch.js, and C# (ServiceStack)."
     },
     {
