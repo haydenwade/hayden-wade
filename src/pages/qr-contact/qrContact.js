@@ -4,7 +4,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import QRCode from "react-qr-code";
 
 //Example preloaded url to test with: 
-//http://localhost:3000/qr?firstName=Hayden&lastName=Wade&phoneNumber=920-360-9269&email=htwade51@gmail.com&url=www.haydenwade.com
+//http://localhost:3000/qr-contact?firstName=Hayden&lastName=Wade&phoneNumber=920-360-9269&email=htwade51@gmail.com&url=www.haydenwade.com
 class QrContact extends React.Component {
     state = {
         isFirstLoadWithBookmarkUrl: false,

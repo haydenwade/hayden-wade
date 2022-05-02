@@ -35,7 +35,8 @@ ReactDOM.render(
         <Route path='/briefing-content-manager' component={BriefingContentManagerSales} />
         <Route path="/ai-swiper" component={AiSwiper} />
         <Route path="/aiswiper" component={AiSwiper} />
-        <Route path="/qr" component={QrContact} />
+        <Route path="/qrcontact" component={QrContact} />
+        <Route path="/qr-contact" component={QrContact} />
         <Route path='/login' component={Login} />
         <Route path="/callback" component={Callback} />
         <Redirect to="/" />
