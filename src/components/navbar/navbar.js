@@ -34,6 +34,7 @@ class AppNavBar extends React.Component {
                 <NavDropdown.Item  href="/ai-swiper" >AI Swiper</NavDropdown.Item>
                 <NavDropdown.Item  href="/briefing-content-manager" >Briefing Content Manager</NavDropdown.Item>
                 <NavDropdown.Item  href="/voice" >Voice AI</NavDropdown.Item>
+                <NavDropdown.Item  href="/qr" >QR Code Contact Generator</NavDropdown.Item>
               </NavDropdown>
               {isLoggedIn() &&
                 <Nav.Item>

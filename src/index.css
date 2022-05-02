@@ -143,3 +143,15 @@ color:white;
 li.nostyle {
   list-style-type: none;
 }
+
+.qr-contact-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width:550px) {
+  .qr-contact-code {
+      padding-top: 20px;
+  }
+}

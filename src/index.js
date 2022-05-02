@@ -19,6 +19,7 @@ import Login from './utils/auth/login';
 import BriefingContentManagerSales from './pages/voice/briefingContentManager';
 import Services from './pages/services/services';
 import AiSwiper from './pages/ai-swiper/ai-swiper';
+import QrContact from './pages/qr-contact/qrContact';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -34,6 +35,7 @@ ReactDOM.render(
         <Route path='/briefing-content-manager' component={BriefingContentManagerSales} />
         <Route path="/ai-swiper" component={AiSwiper} />
         <Route path="/aiswiper" component={AiSwiper} />
+        <Route path="/qr" component={QrContact} />
         <Route path='/login' component={Login} />
         <Route path="/callback" component={Callback} />
         <Redirect to="/" />
