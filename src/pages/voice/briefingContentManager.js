@@ -4,6 +4,7 @@ import withArchives from '../../components/page-container/withArchives';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt, faPencilAlt, faSave } from '@fortawesome/free-solid-svg-icons'
+import config from '../../config';
 
 const BriefingContentManager = ()=> {
         return (
@@ -30,7 +31,7 @@ const BriefingContentManager = ()=> {
                         <FontAwesomeIcon icon={faSignInAlt} size="5x"></FontAwesomeIcon>
                         <br />
                         <h3>Step 1: Sign Up, Login</h3>
-                        If you do not have an account yet please sign up for free trial. Email <a href='mailto:solutions@haydenwade.com?subject=Sign Me Up For BCM&body=Hi Hayden, I would love to get a free trail! What do I need to do?'>solutions@haydenwade.com</a> to get the free trial started.
+                        If you do not have an account yet please sign up for free trial. Email <a href={`mailto:${config.emailAddress}?subject=Sign Me Up For BCM&body=Hi Hayden, I would love to get a free trail! What do I need to do?`}>{config.emailAddress}</a> to get the free trial started.
                     </Col>
                     <Col md={4} xs={12} className="text-center">
                         <FontAwesomeIcon icon={faPencilAlt} size="5x"></FontAwesomeIcon>
@@ -49,7 +50,7 @@ const BriefingContentManager = ()=> {
                 <Row>
                     <Col md={12} xs={12} className="text-center">
                         <br/>
-                        <Button className='red-shadow' size='lg' variant="light" href='mailto:solutions@haydenwade.com?subject=Sign Me Up For Briefing Content Manager&body=Hi Hayden, I would love to get started using the Briefing Content Manager, what are the next steps?'>Sign Up</Button>                    
+                        <Button className='red-shadow' size='lg' variant="light" href={`mailto:${config.emailAddress}?subject=Sign Me Up For Briefing Content Manager&body=Hi Hayden, I would love to get started using the Briefing Content Manager, what are the next steps?`}>Sign Up</Button>                    
                     </Col>
                 </Row>
                 {/* <Row>

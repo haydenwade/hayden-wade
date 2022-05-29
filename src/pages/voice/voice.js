@@ -6,6 +6,7 @@ import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMicrophone, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { faAmazon, faWindows, faGoogle, faApple } from '@fortawesome/free-brands-svg-icons'
+import config from '../../config'
 
 const Voice = () => {
     return (
@@ -19,7 +20,7 @@ const Voice = () => {
                     <Row>
                         <div className='page-img'>
                             <Image src='assets/voicebanner3.png' alt='voice by hayden' rounded fluid />
-                            <Button href='mailto:solutions@haydenwade.com?subject=I Need Voice ASAP&body=Hi Hayden, I would love to chat about how voice can save my company time and money.' size='lg' variant="light">Contact Me<br />To Get Started</Button>
+                            <Button href={`mailto:${config.emailAddress}?subject=I Need Voice ASAP&body=Hi Hayden, I would love to chat about how voice can save my company time and money.`} size='lg' variant="light">Contact Me<br />To Get Started</Button>
                         </div>
                     </Row>
                 </Col>
@@ -44,7 +45,7 @@ const Voice = () => {
                     <br />
                     <h4>Custom Skill Development</h4>
                         For more complex tasks I will work one on one to build a custom skill to automate and stream line processes, as well as create a voice that expands your brand.
-                        I can build voice skills for several platforms, as well as, for chat rooms. <a href='mailto:solutions@haydenwade.com?subject=Can You Build Me a Custom Skill&body=Hi Hayden, I am interested in building a custom skill and...'>Contact Me.</a>
+                        I can build voice skills for several platforms, as well as, for chat rooms. <a href={`mailto:${config.emailAddress}?subject=Can You Build Me a Custom Skill&body=Hi Hayden, I am interested in building a custom skill and...`}>Contact Me.</a>
                     {/* <a href="/custom-skills">Read more.</a> */}
                 </Col>
             </Row>

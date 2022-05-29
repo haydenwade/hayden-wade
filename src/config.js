@@ -18,6 +18,7 @@ const config = {
         clientID: 'UninCDiPheTiAcFFo0Yt2Nb7nORk8ZTf',
         redirectUri: process.env.AUTH_REDIRECT_URL || 'http://www.haydenwade.com/callback',
         audience: 'http://vi.com',
-    }
+    },
+    emailAddress: 'hw@teamwawe.com'
 };
 export default config;

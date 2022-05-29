@@ -23,9 +23,14 @@ class HomeComponent extends React.Component {
                         <a href="/about"><small>Read about me instead?</small></a>
                     </Col>
                 </Row> */}
-                <Row>
-                    <Col>
-                        <Image src='assets/sevenmagicmtns.jpg' alt='Seven Magic Mountains, Las Vegas, Nevada' fluid/> 
+                <Row className="align-items-center">
+                    <Col md={6} sm={12}>
+                        I am a software engineer, creator, and adventure who enjoys helping people learn new technology and 
+                        how to build quality software that scales. Here you will find my professional experience and side projects
+                        that I've created over the years, as well as, links to all my socials where I am most active.
+                    </Col>
+                    <Col md={6} sm={12}>
+                        <Image src='assets/haydenwade.jpg' alt='Seven Magic Mountains, Las Vegas, Nevada' fluid/> 
                     </Col>
                 </Row>
             </Container>
