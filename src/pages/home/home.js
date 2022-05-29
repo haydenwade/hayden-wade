@@ -25,7 +25,7 @@ class HomeComponent extends React.Component {
                 </Row> */}
                 <Row className="align-items-center">
                     <Col md={6} sm={12}>
-                        I am a software engineer, creator, and adventure who enjoys helping people learn new technology and 
+                        I am a software engineer, creator, and adventurer who enjoys helping people learn new technology and 
                         how to build quality software that scales. Here you will find my professional experience and side projects
                         that I've created over the years, as well as, links to all my socials where I am most active.
                     </Col>
