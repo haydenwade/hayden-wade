@@ -3,6 +3,7 @@ import withPageLayout from '../../components/page-container/withPageLayout';
 import { Container, Row, Col, Button} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode, faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import  config from '../../config';
 
 const ServicesComponent = () => {
         return (
@@ -32,7 +33,7 @@ const ServicesComponent = () => {
                 <Row className="text-center last-row">
                     <Col md={12} xs={12}>
                         <br />
-                        <Button className='red-shadow' size='lg' variant="light" href='mailto:solutions@haydenwade.com?subject=I Need Your Help ASAP&body=Hi Hayden, I would love to work together. I am looking for...'>Let's Work Together</Button>                    
+                        <Button className='red-shadow' size='lg' variant="light" href={`mailto:${config.emailAddress}?subject=I Need Your Help ASAP&body=Hi Hayden, I would love to work together. I am looking for...`}>Let's Work Together</Button>                    
                     </Col>
                 </Row>
             </Container>
