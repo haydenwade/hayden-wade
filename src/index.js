@@ -17,9 +17,12 @@ import BriefingManager from './pages/briefingManager/briefingManager';
 import Callback from './utils/auth/callback';
 import Login from './utils/auth/login';
 import BriefingContentManagerSales from './pages/voice/briefingContentManager';
-import Services from './pages/services/services';
 import AiSwiper from './pages/ai-swiper/ai-swiper';
 import QrContact from './pages/qr-contact/qrContact';
+import SalaryNegotiationPage from './pages/services/salaryNegotiation';
+import ResumeReviewPage from './pages/services/resumeReview';
+import CareerCoachingPage from './pages/services/careerCoaching';
+import ConsultingPage from './pages/services/consulting';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -31,7 +34,10 @@ ReactDOM.render(
         <Route path='/experience' component={Resume} />
         <Route path='/briefings' component={BriefingManager} />
         <Route path='/voice' component={Voice} />
-        <Route path='/services' component={Services} />
+        <Route path='/services/salary-negotiation' component={SalaryNegotiationPage} />
+        <Route path='/services/resume-review' component={ResumeReviewPage} />
+        <Route path='/services/career-coaching' component={CareerCoachingPage} />
+        <Route path='/services/consulting' component={ConsultingPage} />
         <Route path='/briefing-content-manager' component={BriefingContentManagerSales} />
         <Route path="/ai-swiper" component={AiSwiper} />
         <Route path="/aiswiper" component={AiSwiper} />

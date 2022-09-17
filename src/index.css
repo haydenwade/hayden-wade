@@ -155,3 +155,14 @@ li.nostyle {
       padding-top: 20px;
   }
 }
+
+.intro-calendly-link {
+  background: none;
+	color: #0d6efd;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: auto;
+	outline: inherit;
+  text-decoration: underline;
+}

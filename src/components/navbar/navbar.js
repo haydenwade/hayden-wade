@@ -20,11 +20,12 @@ class AppNavBar extends React.Component {
                 Experience
             </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link  href="/services">
-                Services
-            </Nav.Link>
-            </Nav.Item>
+            <NavDropdown  title="Services" id="servicesNavDropdown" alignRight>
+                <NavDropdown.Item  href="/services/career-coaching" >Career Coaching</NavDropdown.Item>
+                <NavDropdown.Item  href="/services/resume-review" >Resume Review</NavDropdown.Item>
+                <NavDropdown.Item  href="/services/salary-negotiation" >Salary Negotiation</NavDropdown.Item>
+                <NavDropdown.Item  href="/services/consulting" >Consulting</NavDropdown.Item>
+              </NavDropdown>
             <Nav.Item>
               <Nav.Link  href="/about">
                 About
