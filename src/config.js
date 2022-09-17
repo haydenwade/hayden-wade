@@ -19,6 +19,13 @@ const config = {
         redirectUri: process.env.AUTH_REDIRECT_URL || 'http://www.haydenwade.com/callback',
         audience: 'http://vi.com',
     },
-    emailAddress: 'hw@teamwawe.com'
+    emailAddress: 'hw@teamwawe.com',
+    calendly:{
+        careerCoachingUrl: 'https://calendly.com/haydenwadecoaching/career-coaching',
+        resumeReviewUrl: 'https://calendly.com/haydenwadecoaching/resume-review',
+        introCallUrl:'https://calendly.com/haydenwadecoaching/intro-call',
+        salaryNegotiationUrl:'https://calendly.com/haydenwadecoaching/salary-negotiation',
+        resumeReviewXLinkedInReviewUrl: 'https://calendly.com/haydenwadecoaching/resume-review-clone'
+    }
 };
 export default config;
