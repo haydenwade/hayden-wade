@@ -1,6 +1,6 @@
 import withPageLayout from "../../components/page-container/withPageLayout";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import { PopupButton } from "react-calendly";
+import { PopupButton, PopupModal } from "react-calendly";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFileAlt,
@@ -12,7 +12,9 @@ import {
   salaryNegotiation,
   resumeReview,
 } from "../services/content";
-import  config  from "../../config";
+import config from "../../config";
+import { useLocation } from "react-router-dom";
+import {useEffect, useState} from 'react'
 
 //TODO: move to separate file
 const ServiceComponent = (props) => {
@@ -38,9 +40,24 @@ const ServiceComponent = (props) => {
 };
 
 const HomeComponent = () => {
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(()=>{
+    if (location.pathname.substr(0,6) === "/intro") {
+      setIsOpen(true);
+    }
+  },useLocation)
+  
+
   return (
     <Container>
       <Row className="align-items-center">
+        <PopupModal
+          url={config.calendly.introCallUrl}
+          onModalClose={() => setIsOpen(false)}
+          open={isOpen}
+          rootElement={document.getElementById("root")}
+        />
         <Col md={6} sm={12}>
           <h1>Hi, I'm Hayden Wade.</h1>I am a software engineer, creator, and
           adventurer who enjoys helping people learn new technology and how to
