@@ -43,6 +43,9 @@ ReactDOM.render(
         <Route path="/aiswiper" component={AiSwiper} />
         <Route path="/qrcontact" component={QrContact} />
         <Route path="/qr-contact" component={QrContact} />
+        <Route path="/introcall" component={Home}/>
+        <Route path="/intro-call" component={Home}/>
+        <Route path="/intro" component={Home}/>
         <Route path='/login' component={Login} />
         <Route path="/callback" component={Callback} />
         <Redirect to="/" />

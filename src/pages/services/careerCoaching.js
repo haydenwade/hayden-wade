@@ -58,8 +58,8 @@ const CareerCoachingPage = () => {
       </Row>
       <Row>
         <Col className="text-center pt-3">
-          Hayden has coached individuals who now work at the following
-          companies:
+          <strong>Hayden has coached individuals who now work at the following
+          companies:</strong>
           <hr/>
           <Row>
             <Col>
