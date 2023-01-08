@@ -23,6 +23,7 @@ import SalaryNegotiationPage from './pages/services/salaryNegotiation';
 import ResumeReviewPage from './pages/services/resumeReview';
 import CareerCoachingPage from './pages/services/careerCoaching';
 import ConsultingPage from './pages/services/consulting';
+import ZeroPlusOnePodcastPage from './pages/zero-plus-one-podcast/zero-plus-one-podcast';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -46,6 +47,10 @@ ReactDOM.render(
         <Route path="/introcall" component={Home}/>
         <Route path="/intro-call" component={Home}/>
         <Route path="/intro" component={Home}/>
+        <Route path="/podcast" component={ZeroPlusOnePodcastPage}/>
+        <Route path="/zpo" component={ZeroPlusOnePodcastPage}/>
+        <Route path="/zero-plus-one" component={ZeroPlusOnePodcastPage}/>
+        <Route path="/zero-plus-one-podcast" component={ZeroPlusOnePodcastPage}/>
         <Route path='/login' component={Login} />
         <Route path="/callback" component={Callback} />
         <Redirect to="/" />

@@ -15,6 +15,11 @@ class AppNavBar extends React.Component {
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" >
           <Nav className="mr-auto"></Nav>
           <Nav >
+          <Nav.Item>
+              <Nav.Link href="/podcast">
+                Podcast
+            </Nav.Link>
+            </Nav.Item>
             <Nav.Item>
               <Nav.Link href="/experience">
                 Experience
