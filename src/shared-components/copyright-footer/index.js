@@ -7,7 +7,7 @@ const copyrightFooter = (props) => {
     return (
         <Row>
             <Col className="copyright-footer">
-                Copyright © 2020 {props.beholder}. All rights reserved.
+                Copyright © 2023 {props.beholder}. All rights reserved.
             </Col>
         </Row>
     );

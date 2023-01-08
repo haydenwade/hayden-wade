@@ -30,7 +30,7 @@ class AboutMe extends React.Component {
                         Working at a small startup in the basement of city hall to working at a Fortune 200 company
                         has given me the exposure and knowledge to build high quality software that delivers value to customers.
                         Today I build software for clients all over the world and host
-                        the <a href="https://www.zeroplusonepodcast.com" target="_blank" rel="noopener noreferrer">Zero Plus One Podcast</a> which aims to help aspiring software engineers land 
+                        the <a href="/podcast">Zero Plus One Podcast</a> which aims to help aspiring software engineers land 
                         their dream job. Regardless if I'm abroad or at home I enjoy helping others grow in their career through private mentoring.
                         </p>
                     </Col>

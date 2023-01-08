@@ -166,3 +166,25 @@ li.nostyle {
 	outline: inherit;
   text-decoration: underline;
 }
+
+.center {
+  text-align: center;
+}
+
+.red {
+  color: #f95c55
+}
+
+.social-links a:hover {
+  color: #f95c55
+}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.zpo-alexa-background {
+  background-color: #dadada;
+}
