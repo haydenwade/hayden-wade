@@ -21,11 +21,11 @@ const config = {
     },
     emailAddress: 'hw@teamwawe.com',
     calendly:{
-        careerCoachingUrl: 'https://calendly.com/haydenwadecoaching/career-coaching',
-        resumeReviewUrl: 'https://calendly.com/haydenwadecoaching/resume-review',
+        careerCoachingUrl: 'https://calendly.com/haydenwadecoaching/intro-call',
+        resumeReviewUrl: 'https://calendly.com/haydenwadecoaching/intro-call',
         introCallUrl:'https://calendly.com/haydenwadecoaching/intro-call',
-        salaryNegotiationUrl:'https://calendly.com/haydenwadecoaching/salary-negotiation',
-        resumeReviewXLinkedInReviewUrl: 'https://calendly.com/haydenwadecoaching/resume-review-clone'
+        salaryNegotiationUrl:'https://calendly.com/haydenwadecoaching/intro-call',
+        resumeReviewXLinkedInReviewUrl: 'https://calendly.com/haydenwadecoaching/intro-call'
     }
 };
 export default config;
