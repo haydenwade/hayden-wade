@@ -12,7 +12,7 @@ class Resume extends React.Component {
                     <br />
                     {experience.subtitle}
                     <br /><br />
-                    {experience.body}
+                    <div className="display-linebreak">{experience.body}</div>
                     <br /><br />
                 </Col>
             </Row>
@@ -32,6 +32,76 @@ class Resume extends React.Component {
         return (
             <Container>
                 {this.renderImageWithDownload()}
+                <Row>
+                    <Col md={12} xs={12}>
+                        <h3 className='hr-black'>Key Skills</h3>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={6} xs={12}>
+                        <ul>
+                            <li>Hiring and managing the right talent to complete a project</li>
+                            <li>Building high performing cross functional teams</li>
+                            <li>Scaling software</li>
+                            <li>Leading revenue generating/cost savings initiatives</li>
+                            <li>Continuous improvement</li>
+                            <li>Vendor acquisition and contract negotiation</li>
+                        </ul>
+                    </Col>
+                    <Col md={6} xs={12}>
+                        <ul>
+                            <li>Leadership and Mentoring</li>
+                            <li>Project and Product Management</li>
+                            <li>Digital Marketing and Branding</li>
+                            <li>Change and Incident Management</li>
+                            <li>Application development and testing (SDLC)</li>
+                            <li>Cloud architecture</li>                
+                        </ul>
+                    </Col>
+                </Row>
+                
+                <Row>
+                    <Col md={12} xs={12}>
+                        <h3 className='hr-black'>Work Experience</h3>
+                    </Col>
+                </Row>
+                {
+                    content.map((experience, i) => {
+                        return this.renderSingleExperience(experience, i);
+                    })
+                }
+                <Row>
+                    <Col md={12} xs={12}>
+                        <h3 className='hr-black'>Education</h3>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={12} xs={12}>
+                        University of Wisconsin - Platteville, 2012-2016<br />
+                        Bachelor's of Science, Software Engineering - Magna Cum Laude, Deans List
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={12} xs={12}>
+                        <br/>
+                        Professional Scrum Master I (PSM I) Certification, August 2022
+                    </Col>
+                </Row>
+                <Row style={{paddingTop:'2em'}}>
+                    <Col md={12} xs={12}>
+                        <h3 className='hr-black'>Other Relevant Experience</h3>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={12} xs={12}>
+                    <strong>PERSONAL DEVELOPMENT AND CAREER COACH, COMMUNITY MANAGER, PODCAST HOST</strong>
+                    <br />
+                    Part-time, 2020 - Current
+                    <br /><br />
+                    <div className="display-linebreak">Worked one on one with clients to help them grow in their career or transition careers into software engineering. Help clients with improving their coding skills (data structures, algorithms), interview skills (preparation, mock interviews), job searching, networking, total compensation negotiation, and leadership skills. Founded online community, called Growth Goats, that helps individuals grow in their life, career, relationships, and/or business. Hold weekly live calls for members. Hosted 2 podcasts: Zero Plus One Podcast - career development and all things software engineering, Goat Talk - personal and business development podcast.</div>
+                    <br /><br />
+                    </Col>
+                </Row>
                 <Row>
                     <Col md={12} xs={12}>
                         <h3 className='hr-black'>Technologies</h3>
@@ -92,27 +162,6 @@ class Resume extends React.Component {
                             <li>MongoDB</li>
                             <li>Socket.io</li>
                         </ul>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={12} xs={12}>
-                        <h3 className='hr-black'>Work Experience</h3>
-                    </Col>
-                </Row>
-                {
-                    content.map((experience, i) => {
-                        return this.renderSingleExperience(experience, i);
-                    })
-                }
-                <Row>
-                    <Col md={12} xs={12}>
-                        <h3 className='hr-black'>Education</h3>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={12} xs={12}>
-                        University of Wisconsin - Platteville, 2012-2016<br />
-                        Bachelor's of Science, Software Engineering - Magna Cum Laude, Deans List
                     </Col>
                 </Row>
             </Container>

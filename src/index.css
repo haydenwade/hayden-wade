@@ -188,3 +188,7 @@ ul.no-bullets {
 .zpo-alexa-background {
   background-color: #dadada;
 }
+
+.display-linebreak {
+  white-space: pre-line;
+}
