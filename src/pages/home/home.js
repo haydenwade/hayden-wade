@@ -6,6 +6,7 @@ import {
   faFileAlt,
   faUserFriends,
   faMoneyBill,
+  faHandshake
 } from "@fortawesome/free-solid-svg-icons";
 import {
   careerCoaching,
@@ -112,6 +113,18 @@ const HomeComponent = () => {
             link="/services/resume-review"
             price="$229"
             url={config.calendly.resumeReviewUrl}
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col className="text-center">
+        <hr />
+            <ServiceComponent
+            icon={faHandshake}
+            title={'Introduction Call'}
+            text={'Not sure which is the right service for you or have a different inquiry, schedule an introduction call with me.'}
+            buttonText="Schedule Call"
+            url={config.calendly.introCallUrl}
           />
         </Col>
       </Row>

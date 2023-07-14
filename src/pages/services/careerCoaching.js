@@ -102,7 +102,7 @@ const CareerCoachingPage = () => {
           </p>
           <h3>How do I know if I will like working with Hayden?</h3>
           <p>
-            If you are unsure if Hayden is a good fit, you can schedule a 10
+            If you are unsure if Hayden is a good fit, you can schedule a 15
             minute intro session{" "}
             <PopupButton
               url={config.calendly.introCallUrl}
