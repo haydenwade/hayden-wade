@@ -96,7 +96,7 @@ class Resume extends React.Component {
                     <Col md={12} xs={12}>
                     <strong>PERSONAL DEVELOPMENT AND CAREER COACH, COMMUNITY MANAGER, PODCAST HOST</strong>
                     <br />
-                    Part-time, 2020 - Current
+                    Hobby, 2020 - Current
                     <br /><br />
                     <div className="display-linebreak">Worked one on one with clients to help them grow in their career or transition careers into software engineering. Help clients with improving their coding skills (data structures, algorithms), interview skills (preparation, mock interviews), job searching, networking, total compensation negotiation, and leadership skills. Founded online community, called Growth Goats, that helps individuals grow in their life, career, relationships, and/or business. Hold weekly live calls for members. Hosted 2 podcasts: Zero Plus One Podcast - career development and all things software engineering, Goat Talk - personal and business development podcast.</div>
                     <br /><br />
