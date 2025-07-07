@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Image, Button } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import withPageLayout from '../../components/page-container/withPageLayout';
 import content from './content';
 
@@ -23,7 +23,6 @@ class Resume extends React.Component {
             <Row>
                 <div className='page-img'>
                     <Image src='assets/bg10.png' alt='hayden wade resume' rounded fluid />
-                    <Button variant="light" href='assets/resume.pdf' size='lg'>Download Resume</Button>
                 </div>
             </Row>
         );
